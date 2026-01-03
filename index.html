@@ -373,6 +373,71 @@
             openBtn.classList.remove("hidden");
         }
     });
+
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("popup");
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        let valid = true;
+
+        // reset error
+        document.getElementById("nameError").classList.add("hidden");
+        document.getElementById("emailError").classList.add("hidden");
+        document.getElementById("messageError").classList.add("hidden");
+
+        if (!name) {
+            document.getElementById("nameError").classList.remove("hidden");
+            valid = false;
+        }
+        if (!email) {
+            document.getElementById("emailError").classList.remove("hidden");
+            valid = false;
+        }
+        if (!message) {
+            document.getElementById("messageError").classList.remove("hidden");
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        try {
+            const res = await fetch("/api/send-message", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message
+                })
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                form.reset();
+
+                popup.classList.remove("opacity-0", "translate-y-4");
+                popup.classList.add("opacity-100", "translate-y-0");
+
+                setTimeout(() => {
+                    popup.classList.add("opacity-0", "translate-y-4");
+                    popup.classList.remove("opacity-100", "translate-y-0");
+                }, 3000);
+            } else {
+                alert("Gagal mengirim pesan: " + (data.error || "Unknown error"));
+            }
+        } catch (err) {
+            alert("Gagal mengirim pesan: " + err.message);
+        }
+    });
 </script>
 </body>
 
