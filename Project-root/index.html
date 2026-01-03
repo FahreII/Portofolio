@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | FahreII</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font : Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: "#1B211A",
+                        olive: "#628141",
+                        moss: "#8BAE66",
+                        sand: "#EBD5AB",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-sand text-dark font-poppins">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside id="sidebar"
+        class="fixed top-0 left-0 h-screen w-64 bg-dark text-sand z-50 -translate-x-64 transition-transform duration-300">
+        <div class="h-16 flex items-center justify-between px-6 border-b border-olive/40">
+            <span class="font-medium text-sm tracking-wide">Menu</span>
+            <button onclick="toggleSidebar()" class="text-xl">&times;</button>
+        </div>
+        <nav class="mt-6 px-4">
+            <ul class="flex flex-col gap-2 text-sm">
+                <li><a href="#home" class="block px-4 py-2 hover:bg-olive/30 rounded-lg">Home</a></li>
+                <li><a href="#about" class="block px-4 py-2 hover:bg-olive/30 rounded-lg">About</a></li>
+                <li><a href="#projects" class="block px-4 py-2 hover:bg-olive/30 rounded-lg">Projects</a></li>
+                <li><a href="#github" class="block px-4 py-2 hover:bg-olive/30 rounded-lg">GitHub</a></li>
+                <li><a href="#contact" class="block px-4 py-2 hover:bg-olive/30 rounded-lg">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= OPEN BUTTON ================= -->
+    <button id="openBtn" onclick="toggleSidebar()" class="fixed top-4 left-4 z-50 bg-dark text-sand px-4 py-2 rounded">
+        ☰
+    </button>
+
+    <!-- ================= MAIN ================= -->
+    <main id="main" class="transition-all duration-300 ml-0">
+
+        <!-- ================= HOME ================= -->
+        <section id="home" class="min-h-screen flex items-center px-8 md:px-20">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="max-w-2xl">
+                    <h4 class="text-olive text-sm md:text-base mb-3 font-medium">Halo, saya Abitien Ahmad Fahrel</h4>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-wide">
+                        SELAMAT DATANG DI<br>
+                        <span class="text-moss font-normal">PORTOFOLIO SAYA</span>
+                    </h1>
+                    <h3 class="mt-5 text-xl md:text-2xl text-olive font-light">Saya seorang</h3>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div
+                            class="bg-sand border border-olive/40 rounded-2xl px-4 py-5 text-center transition hover:-translate-y-1 hover:shadow-md">
+                            <p class="text-sm md:text-base font-medium">Game Developer</p>
+                        </div>
+                        <div
+                            class="bg-sand border border-olive/40 rounded-2xl px-4 py-5 text-center transition hover:-translate-y-1 hover:shadow-md">
+                            <p class="text-sm md:text-base font-medium">Frontend Developer</p>
+                        </div>
+                        <div
+                            class="bg-sand border border-olive/40 rounded-2xl px-4 py-5 text-center transition hover:-translate-y-1 hover:shadow-md">
+                            <p class="text-sm md:text-base font-medium">UI / UX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="min-h-screen flex items-center px-8 md:px-20 bg-white">
+            <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-6xl font-light leading-tight text-dark">Tentang<br><span
+                            class="text-moss font-medium">Saya</span></h2>
+                    <div class="mt-6 w-16 h-1 bg-olive rounded-full"></div>
+                    <div class="mt-10 space-y-8">
+                        <div>
+                            <h4 class="text-sm font-medium text-olive mb-3">Web & Programming</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML logo"
+                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS logo"
+                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo"
+                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo"
+                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# logo"
+                                    class="w-8 h-8">
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-medium text-olive mb-3">Game Development</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity logo"
+                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" alt="Godot logo"
+                                    class="w-8 h-8">
+                                <img src="https://latestlogo.com/wp-content/uploads/2025/04/roblox-studio-scaled.png" alt="roblox studio logo" 
+                                    class="w-8 h-8">
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-medium text-olive mb-3">Design & Tools</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="studio logo"
+                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="studio logo"
+                                    class="w-8 h-8">
+                                <img src="https://vectorseek.com/wp-content/uploads/2023/11/Aseprite-Logo-Vector.svg-.png" alt="C# logo" 
+                                    class="w-8 h-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-6">
+                    <div class="absolute left-0 top-1 w-[2px] h-full bg-olive/40"></div>
+                    <p class="text-sm md:text-base leading-relaxed text-dark/80">
+                        Saya <span class="font-medium text-dark">Abitien Ahmad Fahrel</span>, berusia 18 tahun.
+                        Ketertarikan saya pada dunia <span class="text-olive font-medium">game development</span>
+                        dimulai sejak 2020,
+                        yang mendorong saya mempelajari pemrograman saat kelas 3 SMA.
+                        <br><br>
+                        Selain mengembangkan game, saya juga memiliki minat pada bidang <span
+                            class="text-olive font-medium">frontend</span> dan <span
+                            class="text-olive font-medium">UI/UX</span>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECTS ================= -->
+        <section id="projects" class="py-32 px-8 md:px-20 bg-sand text-dark">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-light leading-tight">Proyek<br><span class="font-medium text-olive">Saya</span>
+                </h2>
+                <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
+                <div class="mt-16 grid lg:grid-cols-3 gap-10">
+                    <div
+                        class="lg:col-span-2 group rounded-3xl border border-olive/40 p-8 bg-sand hover:border-moss transition">
+                        <div class="h-72 rounded-2xl bg-dark/10 mb-6 group-hover:scale-[1.02] transition">
+                            <img src="aset/Sistem Login.jpg" alt="" class="rounded">
+                        </div>
+                        <h3 class="text-2xl font-medium mb-2">Sistem login</h3>
+                        <p class="text-sm text-dark/70 mb-4">Python Tkinter</p>
+                        <li><a href="aset/Sistem Login.jpg" class="text-sm text-olive font-medium group-hover:underline">Lihat proyek →</a></li>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="group rounded-2xl border border-olive/30 p-6 bg-sand hover:border-moss transition">
+
+                            <div class="h-32 rounded-xl bg-dark/10 mb-12 group-hover:scale-[1.02] transition">
+                                <img src="aset/Web pariwisata.png" alt="web pariwisata" class="rounded">
+                            </div>
+                            
+                            <h4 class="text-lg font-medium mb-1">Website Pariwisata</h4>
+                            <p class="text-xs text-dark/60">HTML CSS JAVASCRIPT</p>
+                        </div>
+                        <div class="group rounded-2xl border border-olive/30 p-6 bg-sand hover:border-moss transition">
+                            <div class="h-32 rounded-xl bg-dark/10 mb-12 group-hover:scale-[1.02] transition">
+                                <img src="aset/Majelis daftar.png" alt="" class="rounded">
+                            </div>
+                            <h4 class="text-lg font-medium mb-1">Form pendaftaran</h4>
+                            <p class="text-xs text-dark/60">HTML CSS JAVASCRIPT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GITHUB ================= -->
+        <section id="github" class="min-h-screen flex items-center px-8 md:px-20">
+            <div class="max-w-6xl mx-auto w-full">
+                <h2 class="text-5xl font-light">Aktivitas<br><span class="font-medium text-olive">GitHub</span></h2>
+                <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
+                <div class="mt-12 overflow-x-auto">
+                    <img src="https://ghchart.rshah.org/FahreII" alt="GitHub Contribution" class="w-full max-w-5xl">
+                </div>
+                <a href="https://github.com/FahreII" target="_blank"
+                    class="inline-block mt-10 text-sm text-olive hover:underline">Lihat profil GitHub →</a>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="py-32 px-8 md:px-20 bg-white text-dark">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-light leading-tight">Mari<br><span
+                            class="font-medium text-olive">Terhubung</span></h2>
+                    <p class="mt-6 text-sm text-dark/70 max-w-md">Punya ide, proyek, atau sekadar ingin berdiskusi?
+                        Kirim pesan dan saya akan membalas secepatnya.</p>
+                    <div class="mt-10 flex gap-4">
+                        <a href="https://github.com/USERNAME_KAMU" target="_blank"
+                            class="w-12 h-12 rounded-full border border-olive/40 flex items-center justify-center hover:bg-olive transition group">
+                            <svg class="w-5 h-5 fill-olive group-hover:fill-white" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.97-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.67.8.56 4.56-1.53 7.85-5.86 7.85-10.97 C23.5 5.74 18.27.5 12 .5z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/USERNAME_KAMU" target="_blank"
+                            class="w-12 h-12 rounded-full border border-olive/40 flex items-center justify-center hover:bg-olive transition group">
+                            <svg class="w-5 h-5 fill-olive group-hover:fill-white" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41 .61.24 1.05.53 1.51.99 .46.46.75.9.99 1.51 .17.46.35 1.26.41 2.43 .058 1.266.07 1.65.07 4.85 0 3.2-.012 3.584-.07 4.85 -.056 1.17-.24 1.97-.41 2.43 -.24.61-.53 1.05-.99 1.51 -.46.46-.9.75-1.51.99 -.46.17-1.26.35-2.43.41 -1.266.058-1.65.07-4.85.07 -3.2 0-3.584-.012-4.85-.07 -1.17-.056-1.97-.24-2.43-.41 -.61-.24-1.05-.53-1.51-.99 -.46-.46-.75-.9-.99-1.51 -.17-.46-.35-1.26-.41-2.43 -.058-1.266-.07-1.65-.07-4.85 0-3.2.012-3.584.07-4.85 .056-1.17.24-1.97.41-2.43 .24-.61.53-1.05.99-1.51 .46-.46.9-.75 1.51-.99 .46-.17 1.26-.35 2.43-.41 1.266-.058 1.65-.07 4.85-.07z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-sand/40 p-10 rounded-3xl shadow-sm">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <input type="text" id="name" placeholder="Nama"
+                                class="w-full bg-transparent border-b border-olive/40 focus:border-olive outline-none py-3 text-sm">
+                            <p id="nameError" class="text-red-600 text-xs mt-1 hidden">Nama wajib diisi</p>
+                        </div>
+                        <div>
+                            <input type="email" id="email" placeholder="Email"
+                                class="w-full bg-transparent border-b border-olive/40 focus:border-olive outline-none py-3 text-sm">
+                            <p id="emailError" class="text-red-600 text-xs mt-1 hidden">Email wajib diisi</p>
+                        </div>
+                        <div>
+                            <textarea id="message" rows="4" placeholder="Pesan"
+                                class="w-full bg-transparent border-b border-olive/40 focus:border-olive outline-none py-3 text-sm resize-none"></textarea>
+                            <p id="messageError" class="text-red-600 text-xs mt-1 hidden">Pesan wajib diisi</p>
+                        </div>
+                        <button type="submit"
+                            class="w-full mt-6 py-3 rounded-full bg-olive text-white text-sm hover:bg-moss transition">Kirim
+                            Pesan</button>
+                    </form>
+                    <div id="popup"
+                        class="fixed top-8 right-8 bg-olive text-white px-6 py-4 rounded-xl shadow-lg opacity-0 transform translate-y-4 transition-all duration-300 z-50 pointer-events-none">
+                        Pesan berhasil dikirim!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const main = document.getElementById("main");
+        const openBtn = document.getElementById("openBtn");
+        let isOpen = false;
+
+        function toggleSidebar() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                sidebar.classList.remove("-translate-x-64");
+                main.classList.add("ml-64");
+                if (window.innerWidth >= 768) openBtn.classList.add("hidden");
+            } else {
+                sidebar.classList.add("-translate-x-64");
+                main.classList.remove("ml-64");
+                openBtn.classList.remove("hidden");
+            }
+        }
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+                if (isOpen) openBtn.classList.add("hidden");
+                else openBtn.classList.remove("hidden");
+            } else {
+                openBtn.classList.remove("hidden");
+            }
+        });
+
+        // ================= FORM & TELEGRAM =================
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("popup");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            let valid = true;
+
+            document.getElementById("nameError").classList.add("hidden");
+            document.getElementById("emailError").classList.add("hidden");
+            document.getElementById("messageError").classList.add("hidden");
+
+            if (name === "") { document.getElementById("nameError").classList.remove("hidden"); valid = false; }
+            if (email === "") { document.getElementById("emailError").classList.remove("hidden"); valid = false; }
+            if (message === "") { document.getElementById("messageError").classList.remove("hidden"); valid = false; }
+
+            if (valid) {
+                try {
+                    const res = await fetch("/api/send-message", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ name, email, message })
+                    });
+                    const data = await res.json(); // Harusnya server mengirim JSON
+                    if (data.success) {
+                        form.reset();
+                        popup.classList.remove("opacity-0", "translate-y-4");
+                        popup.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
+                        setTimeout(() => {
+                            popup.classList.add("opacity-0", "translate-y-4");
+                            popup.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
+                        }, 3000);
+                    } else {
+                        alert("Gagal mengirim pesan! " + (data.error || ""));
+                    }
+                } catch (err) {
+                    alert("Gagal mengirim pesan! " + err.message);
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
