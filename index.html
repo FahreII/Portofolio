@@ -330,72 +330,78 @@
         <!-- ================= DASHBOARD ================= -->
         <section id="dashboard" class="min-h-screen px-8 md:px-20 py-24 bg-white">
             <div class="max-w-6xl mx-auto">
-
+        
                 <!-- Header -->
                 <h2 class="text-5xl font-light">
                     Dashboard<br>
                     <span class="font-medium text-olive">Aktivitas Programming</span>
                 </h2>
                 <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
-
-                <!-- ===== STATS CARD ===== -->
+        
+                <!-- ===== TOP CARDS ===== -->
                 <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                    <div class="p-6 rounded-2xl bg-sand shadow-sm">
-                        <p class="text-xs text-dark/60">GitHub Repositories</p>
-                        <h3 id="repoCount" class="text-3xl font-medium mt-2">–</h3>
+                    <div
+                        class="p-8 rounded-3xl bg-sand shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer flex flex-col justify-between">
+                        <h3 class="text-lg font-medium mb-2">Top Languages</h3>
+                        <ul id="languages" class="text-sm text-dark/70 space-y-1 mb-4">
+                            <li>–</li>
+                            <li>–</li>
+                            <li>–</li>
+                        </ul>
+                        <p class="text-xs text-dark/50">Bahasa pemrograman yang paling sering digunakan</p>
                     </div>
-
-                    <div class="p-6 rounded-2xl bg-sand shadow-sm">
-                        <p class="text-xs text-dark/60">Followers</p>
-                        <h3 id="followerCount" class="text-3xl font-medium mt-2">–</h3>
+                    
+                    <div
+                        class="p-8 rounded-3xl bg-sand shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer flex flex-col justify-between">
+                        <h3 class="text-lg font-medium mb-2">Coding Time</h3>
+                        <p class="text-sm text-dark/70 mb-4">
+                            Akan terhubung dengan WakaTime untuk menampilkan jam ngoding.
+                        </p>
+                        <h2 id="codingTime" class="text-3xl font-semibold text-olive">–</h2>
                     </div>
-
-                    <div class="p-6 rounded-2xl bg-sand shadow-sm">
-                        <p class="text-xs text-dark/60">Commits Tahun Ini</p>
-                        <h3 id="commitThisYear" class="text-3xl font-medium mt-2">–</h3>
+        
+                    <!-- GitHub Stats -->
+                    <div
+                        class="p-8 rounded-3xl bg-sand shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-xs text-dark/60">GitHub Repositories</p>
+                                <h3 id="repoCount" class="text-3xl font-medium mt-1">–</h3>
+                            </div>
+        
+                            <div>
+                                <p class="text-xs text-dark/60">Followers</p>
+                                <h3 id="followerCount" class="text-3xl font-medium mt-1">–</h3>
+                            </div>
+        
+                            <div>
+                                <p class="text-xs text-dark/60">Commits Tahun Ini</p>
+                                <h3 id="commitThisYear" class="text-3xl font-medium mt-1">–</h3>
+                            </div>
+                        </div>
                     </div>
-
+        
                 </div>
-
+        
                 <!-- ===== GITHUB CONTRIBUTION ===== -->
                 <div class="mt-20">
                     <h3 class="text-2xl font-light mb-6">
                         GitHub <span class="text-olive font-medium">Contribution</span>
                     </h3>
-
-                    <div class="overflow-x-auto bg-sand p-6 rounded-2xl shadow-sm">
+                    <div
+                        class="overflow-x-auto bg-sand p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
                         <img src="https://ghchart.rshah.org/628141/FahreII" alt="GitHub Contribution"
-                            class="w-full max-w-5xl mx-auto">
+                            class="w-full max-w-5xl mx-auto rounded-xl">
                     </div>
-
                     <a href="https://github.com/FahreII" target="_blank"
-                        class="inline-block mt-6 text-sm text-olive hover:underline">
+                        class="inline-block mt-6 text-sm text-olive font-medium hover:underline">
                         Lihat profil GitHub →
                     </a>
                 </div>
-
-                <!-- ===== NEXT FEATURE (PLACEHOLDER) ===== -->
-                <div class="mt-24 grid md:grid-cols-2 gap-8">
-
-                    <div class="p-8 rounded-3xl border border-olive/30">
-                        <h4 class="text-lg font-medium mb-2">⌛ Coding Time</h4>
-                        <p class="text-sm text-dark/70">
-                            Akan terhubung dengan WakaTime untuk menampilkan jam ngoding.
-                        </p>
-                    </div>
-
-                    <div class="p-8 rounded-3xl border border-olive/30">
-                        <h4 class="text-lg font-medium mb-2">🧠 Problem Solving</h4>
-                        <p class="text-sm text-dark/70">
-                            Statistik LeetCode / HackerRank (coming soon).
-                        </p>
-                    </div>
-
-                </div>
-
+        
             </div>
         </section>
+
 
 
         <!-- ================= CONTACT ================= -->
@@ -569,6 +575,21 @@
                     followerCount.textContent = "–";
                     commitThisYear.textContent = "–";
                     });
+
+        fetch("/api/wakatime")
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("codingTime").textContent = data.total_time;
+
+                const list = document.getElementById("languages");
+                list.innerHTML = "";
+
+                data.languages.forEach(lang => {
+                    const li = document.createElement("li");
+                    li.textContent = `${lang.name} - ${lang.text}`;
+                    list.appendChild(li);
+                });
+            });
     </script>
 </body>
 
