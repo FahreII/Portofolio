@@ -44,20 +44,25 @@
     <!-- ================= SIDEBAR ================= -->
     <aside id="sidebar" class="fixed top-0 left-0 h-screen w-full md:w-64 bg-dark text-sand z-50 
             -translate-x-full md:-translate-x-64 transition-transform duration-300">
+
         <div class="px-6 py-8 border-b border-olive/40 text-center relative">
             <button onclick="toggleSidebar()" class="absolute top-4 right-4 text-xl">&times;</button>
-        
+
             <div class="mx-auto flex items-center justify-center text-olive text-sm">
                 <img src="aset/abitien ahmad fahrel.png" alt="" class="w-20 h-20">
             </div>
+
             <h3 class="mt-1 text-sm font-medium tracking-wide">
                 Abitien Ahmad Fahrel
             </h3>
         </div>
+
         <nav class="mt-6 px-4">
             <ul class="flex flex-col gap-1 text-sm">
+
                 <li>
-                    <a href="#home" onclick="handleNavClick()" class="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
+                    <a href="#home" onclick="handleNavClick()"
+                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
                         <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
                             <path
                                 d="M3 10.5L12 3l9 7.5V21a1.5 1.5 0 01-1.5 1.5H15a1.5 1.5 0 01-1.5-1.5v-4.5h-3V21A1.5 1.5 0 019 22.5H4.5A1.5 1.5 0 013 21V10.5z" />
@@ -67,7 +72,8 @@
                 </li>
 
                 <li>
-                    <a href="#about" onclick="handleNavClick()" class="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
+                    <a href="#about" onclick="handleNavClick()"
+                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
                         <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
                             <path d="M12 12a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" />
                             <path d="M3.75 20.25a8.25 8.25 0 0116.5 0" />
@@ -77,7 +83,8 @@
                 </li>
 
                 <li>
-                    <a href="#projects" onclick="handleNavClick()" class="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
+                    <a href="#projects" onclick="handleNavClick()"
+                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
                         <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
                             <path
                                 d="M3 6.75A2.25 2.25 0 015.25 4.5h5.19a2.25 2.25 0 011.59.66l1.12 1.12H18.75A2.25 2.25 0 0121 8.53v8.72A2.25 2.25 0 0118.75 19.5H5.25A2.25 2.25 0 013 17.25V6.75z" />
@@ -87,18 +94,18 @@
                 </li>
 
                 <li>
-                    <a href="#github" onclick="handleNavClick()" class="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
-                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.97-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.67.8.56 4.56-1.53 7.85-5.86 7.85-10.97C23.5 5.74 18.27.5 12 .5z" />
+                    <a href="#dashboard" onclick="handleNavClick()"
+                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
+                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
+                            <path d="M3 3h18v18H3z" />
                         </svg>
-                        <span>GitHub</span>
+                        <span>Dashboard</span>
                     </a>
                 </li>
 
-
                 <li>
-                    <a href="#contact" onclick="handleNavClick()" class="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
+                    <a href="#contact" onclick="handleNavClick()"
+                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
                         <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
                             <path
                                 d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-2.182a2.25 2.25 0 00-1.386-2.073l-2.76-1.104a2.25 2.25 0 00-2.61.72l-.86 1.147a12.05 12.05 0 01-5.32-5.32l1.147-.86a2.25 2.25 0 00.72-2.61l-1.104-2.76A2.25 2.25 0 006.432 2.25H4.25A2.25 2.25 0 002 4.5v2.25z" />
@@ -107,25 +114,17 @@
                     </a>
                 </li>
 
-                    </a>
-                </li>
-                
-                <!-- SIDEBAR FOOTER -->
-                <div class="mt-auto px-6 pb-6 text-xs text-sand/70">
-                
-                    <div class="border-t border-sand/20 pt-4">
-                
-                        <p class="leading-relaxed">
-                            COPYRIGHT © 2026<br>
-                            <span class="">
-                                Abitien Ahmad Fahrel.
-                            </span>
-                        </p>
-                
-                    </div>
-                </div>
-
             </ul>
+
+            <!-- SIDEBAR FOOTER -->
+            <div class="mt-auto px-6 pb-6 text-xs text-sand/70">
+                <div class="border-t border-sand/20 pt-4">
+                    <p>
+                        COPYRIGHT © 2026<br>
+                        Abitien Ahmad Fahrel.
+                    </p>
+                </div>
+            </div>
         </nav>
     </aside>
 
@@ -134,10 +133,8 @@
         ☰
     </button>
 
-    <!-- ================= MAIN ================= -->
+    <!-- ================= MAIN CONTENT ================= -->
     <main id="main" class="transition-all duration-300 ml-0">
-
-        <!-- ================= HOME ================= -->
         <section id="home" class="min-h-screen flex items-center px-8 md:px-20">
             <div class="max-w-6xl mx-auto w-full">
                 <div class="max-w-2xl">
@@ -176,38 +173,38 @@
                         <div>
                             <h4 class="text-sm font-medium text-olive mb-3">Web & Programming</h4>
                             <div class="flex flex-wrap gap-4">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML logo"
-                                    class="w-8 h-8">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS logo"
-                                    class="w-8 h-8">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo"
-                                    class="w-8 h-8">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo"
-                                    class="w-8 h-8">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# logo"
-                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML logo" class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS logo" class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript logo" class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python logo" class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                                    alt="C# logo" class="w-8 h-8">
                             </div>
                         </div>
                         <div>
                             <h4 class="text-sm font-medium text-olive mb-3">Game Development</h4>
                             <div class="flex flex-wrap gap-4">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity logo"
-                                    class="w-8 h-8">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" alt="Godot logo"
-                                    class="w-8 h-8">
-                                <img src="https://latestlogo.com/wp-content/uploads/2025/04/roblox-studio-scaled.png" alt="roblox studio logo" 
-                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+                                    alt="Unity logo" class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg"
+                                    alt="Godot logo" class="w-8 h-8">
+                                <img src="https://latestlogo.com/wp-content/uploads/2025/04/roblox-studio-scaled.png"
+                                    alt="roblox studio logo" class="w-8 h-8">
                             </div>
                         </div>
                         <div>
                             <h4 class="text-sm font-medium text-olive mb-3">Design & Tools</h4>
                             <div class="flex flex-wrap gap-4">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="studio logo"
-                                    class="w-8 h-8">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="studio logo"
-                                    class="w-8 h-8">
-                                <img src="https://vectorseek.com/wp-content/uploads/2023/11/Aseprite-Logo-Vector.svg-.png" alt="C# logo" 
-                                    class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                    alt="studio logo" class="w-8 h-8">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg"
+                                    alt="studio logo" class="w-8 h-8">
+                                <img src="https://vectorseek.com/wp-content/uploads/2023/11/Aseprite-Logo-Vector.svg-.png"
+                                    alt="C# logo" class="w-8 h-8">
                             </div>
                         </div>
                     </div>
@@ -231,7 +228,7 @@
         <!-- ================= PROJECTS ================= -->
         <section id="projects" class="py-32 px-8 md:px-20 bg-sand text-dark">
             <div class="max-w-6xl mx-auto">
-        
+
                 <!-- Header -->
                 <div class="mb-24 text-center md:text-left">
                     <h2 class="text-5xl md:text-6xl font-light leading-tight">
@@ -243,15 +240,15 @@
                         dalam frontend development, UI/UX, dan pengembangan aplikasi.
                     </p>
                 </div>
-        
+
                 <!-- ===== PROJECT ITEM ===== -->
                 <div class="space-y-28">
-        
+
                     <!-- Project 1 -->
                     <div class="grid md:grid-cols-2 gap-14 items-center">
                         <div class="space-y-4">
                             <p class="text-xs tracking-widest text-olive uppercase mb-3">
-                                Case Study 01
+                                Project 1
                             </p>
                             <h3 class="text-3xl md:text-4xl font-light mb-4">
                                 Sistem Login Aplikasi
@@ -261,7 +258,7 @@
                                 penanganan error, dan struktur kode yang rapi untuk simulasi
                                 sistem autentikasi sederhana.
                             </p>
-        
+
                             <div class="flex flex-wrap gap-3 mb-8">
                                 <span class="text-xs px-4 py-1 border border-olive/40 rounded-full bg-olive/10">
                                     Python
@@ -269,18 +266,15 @@
                                 <span class="text-xs px-4 py-1 border border-olive/40 rounded-full bg-olive/10">
                                     Tkinter
                                 </span>
-                                <span class="text-xs px-4 py-1 border border-olive/40 rounded-full bg-olive/10">
-                                    Desktop App
-                                </span>
                             </div>
-        
+
                             <a href="aset/Sistem Login.jpg"
                                 class="inline-flex items-center gap-2 text-sm font-medium text-olive group transition-all hover:text-white hover:bg-olive px-4 py-2 rounded-full shadow-md">
                                 View project
                                 <span class="transition-transform group-hover:translate-x-1">→</span>
                             </a>
                         </div>
-        
+
                         <div
                             class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                             <img src="aset/Sistem Login.jpg"
@@ -288,12 +282,12 @@
                                 alt="Sistem Login">
                         </div>
                     </div>
-        
+
                     <!-- Project 2 -->
                     <div class="grid md:grid-cols-2 gap-14 items-center md:flex-row-reverse">
                         <div class="md:order-2 space-y-4">
                             <p class="text-xs tracking-widest text-olive uppercase mb-3">
-                                Case Study 02
+                                Project 2
                             </p>
                             <h3 class="text-3xl md:text-4xl font-light mb-4">
                                 Website Pariwisata
@@ -302,7 +296,7 @@
                                 Website informatif pariwisata dengan struktur konten rapi,
                                 navigasi jelas,serta dilengkapi fitur rating untuk tour guide.
                             </p>
-        
+
                             <div class="flex flex-wrap gap-3 mb-8">
                                 <span class="text-xs px-4 py-1 border border-olive/40 rounded-full bg-olive/10">
                                     HTML
@@ -314,14 +308,14 @@
                                     JavaScript
                                 </span>
                             </div>
-        
+
                             <a href="https://majelis-tour.vercel.app/"
                                 class="inline-flex items-center gap-2 text-sm font-medium text-olive group transition-all hover:text-white hover:bg-olive px-4 py-2 rounded-full shadow-md">
                                 View project
                                 <span class="transition-transform group-hover:translate-x-1">→</span>
                             </a>
                         </div>
-        
+
                         <div
                             class="relative md:order-1 group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                             <img src="aset/Web pariwisata.png"
@@ -329,27 +323,83 @@
                                 alt="Website Pariwisata">
                         </div>
                     </div>
-        
                 </div>
-        
             </div>
         </section>
 
-        <!-- ================= GITHUB ================= -->
-        <section id="github" class="min-h-screen flex items-center px-8 md:px-20">
-            <div class="max-w-6xl mx-auto w-full">
-                <h2 class="text-5xl font-light">Aktivitas<br><span class="font-medium text-olive">GitHub</span></h2>
+        <!-- ================= DASHBOARD ================= -->
+        <section id="dashboard" class="min-h-screen px-8 md:px-20 py-24 bg-white">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Header -->
+                <h2 class="text-5xl font-light">
+                    Dashboard<br>
+                    <span class="font-medium text-olive">Aktivitas Programming</span>
+                </h2>
                 <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
-                <div class="mt-12 overflow-x-auto">
-                    <img src="https://ghchart.rshah.org/FahreII" alt="GitHub Contribution" class="w-full max-w-5xl">
+
+                <!-- ===== STATS CARD ===== -->
+                <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <div class="p-6 rounded-2xl bg-sand shadow-sm">
+                        <p class="text-xs text-dark/60">GitHub Repositories</p>
+                        <h3 id="repoCount" class="text-3xl font-medium mt-2">–</h3>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-sand shadow-sm">
+                        <p class="text-xs text-dark/60">Followers</p>
+                        <h3 id="followerCount" class="text-3xl font-medium mt-2">–</h3>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-sand shadow-sm">
+                        <p class="text-xs text-dark/60">Commits Tahun Ini</p>
+                        <h3 id="commitThisYear" class="text-3xl font-medium mt-2">–</h3>
+                    </div>
+
                 </div>
-                <a href="https://github.com/FahreII" target="_blank"
-                    class="inline-block mt-10 text-sm text-olive hover:underline">Lihat profil GitHub →</a>
+
+                <!-- ===== GITHUB CONTRIBUTION ===== -->
+                <div class="mt-20">
+                    <h3 class="text-2xl font-light mb-6">
+                        GitHub <span class="text-olive font-medium">Contribution</span>
+                    </h3>
+
+                    <div class="overflow-x-auto bg-sand p-6 rounded-2xl shadow-sm">
+                        <img src="https://ghchart.rshah.org/628141/FahreII" alt="GitHub Contribution"
+                            class="w-full max-w-5xl mx-auto">
+                    </div>
+
+                    <a href="https://github.com/FahreII" target="_blank"
+                        class="inline-block mt-6 text-sm text-olive hover:underline">
+                        Lihat profil GitHub →
+                    </a>
+                </div>
+
+                <!-- ===== NEXT FEATURE (PLACEHOLDER) ===== -->
+                <div class="mt-24 grid md:grid-cols-2 gap-8">
+
+                    <div class="p-8 rounded-3xl border border-olive/30">
+                        <h4 class="text-lg font-medium mb-2">⌛ Coding Time</h4>
+                        <p class="text-sm text-dark/70">
+                            Akan terhubung dengan WakaTime untuk menampilkan jam ngoding.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-olive/30">
+                        <h4 class="text-lg font-medium mb-2">🧠 Problem Solving</h4>
+                        <p class="text-sm text-dark/70">
+                            Statistik LeetCode / HackerRank (coming soon).
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
         </section>
+
 
         <!-- ================= CONTACT ================= -->
-        <section id="contact" class="py-32 px-8 md:px-20 bg-white text-dark">
+        <section id="contact" class="py-32 px-8 md:px-20 text-dark">
             <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-4xl md:text-5xl font-light leading-tight">Mari<br><span
@@ -392,122 +442,134 @@
         </section>
     </main>
 
-    <!-- ================= JAVASCRIPT ================= -->
-<script>
-    const sidebar = document.getElementById("sidebar");
-    const main = document.getElementById("main");
-    const openBtn = document.getElementById("openBtn");
-    let isOpen = false;
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const main = document.getElementById("main");
+        const openBtn = document.getElementById("openBtn");
+        let isOpen = false;
 
-    function toggleSidebar() {
-        isOpen = !isOpen;
+        function toggleSidebar() {
+            isOpen = !isOpen;
 
-        if (isOpen) {
-            sidebar.classList.remove("-translate-x-full", "md:-translate-x-64");
-            sidebar.classList.add("translate-x-0");
-
-            // Desktop → konten geser
-            if (window.innerWidth >= 768) {
-                main.classList.add("ml-64");
-                openBtn.classList.add("hidden");
-            }
-        } else {
-            sidebar.classList.add("-translate-x-full", "md:-translate-x-64");
-            sidebar.classList.remove("translate-x-0");
-            main.classList.remove("ml-64");
-            openBtn.classList.remove("hidden");
-        }
-    }
-
-    // ✅ AUTO CLOSE SAAT MENU DIKLIK (MOBILE)
-    function handleNavClick() {
-        if (window.innerWidth < 768 && isOpen) {
-            toggleSidebar();
-        }
-    }
-
-    // RESPONSIVE FIX
-    window.addEventListener("resize", () => {
-        if (window.innerWidth >= 768) {
-            sidebar.classList.remove("-translate-x-full");
             if (isOpen) {
-                main.classList.add("ml-64");
-                openBtn.classList.add("hidden");
+                sidebar.classList.remove("-translate-x-full", "md:-translate-x-64");
+                sidebar.classList.add("translate-x-0");
+
+                // Desktop → konten geser
+                if (window.innerWidth >= 768) {
+                    main.classList.add("ml-64");
+                    openBtn.classList.add("hidden");
+                }
+            } else {
+                sidebar.classList.add("-translate-x-full", "md:-translate-x-64");
+                sidebar.classList.remove("translate-x-0");
+                main.classList.remove("ml-64");
+                openBtn.classList.remove("hidden");
+            }
+        }
+
+        // ✅ AUTO CLOSE SAAT MENU DIKLIK (MOBILE)
+        function handleNavClick() {
+            if (window.innerWidth < 768 && isOpen) {
+                toggleSidebar();
+            }
+        }
+
+        // RESPONSIVE FIX
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+                sidebar.classList.remove("-translate-x-full");
+                if (isOpen) {
+                    main.classList.add("ml-64");
+                    openBtn.classList.add("hidden");
+                } else {
+                    main.classList.remove("ml-64");
+                    openBtn.classList.remove("hidden");
+                }
             } else {
                 main.classList.remove("ml-64");
                 openBtn.classList.remove("hidden");
             }
-        } else {
-            main.classList.remove("ml-64");
-            openBtn.classList.remove("hidden");
-        }
-    });
+        });
 
-    const form = document.getElementById("contactForm");
-    const popup = document.getElementById("popup");
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("popup");
 
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-        let valid = true;
+            let valid = true;
 
-        // reset error
-        document.getElementById("nameError").classList.add("hidden");
-        document.getElementById("emailError").classList.add("hidden");
-        document.getElementById("messageError").classList.add("hidden");
+            // reset error
+            document.getElementById("nameError").classList.add("hidden");
+            document.getElementById("emailError").classList.add("hidden");
+            document.getElementById("messageError").classList.add("hidden");
 
-        if (!name) {
-            document.getElementById("nameError").classList.remove("hidden");
-            valid = false;
-        }
-        if (!email) {
-            document.getElementById("emailError").classList.remove("hidden");
-            valid = false;
-        }
-        if (!message) {
-            document.getElementById("messageError").classList.remove("hidden");
-            valid = false;
-        }
-
-        if (!valid) return;
-
-        try {
-            const res = await fetch("/api/send-message", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    message
-                })
-            });
-
-            const data = await res.json();
-
-            if (data.success) {
-                form.reset();
-
-                popup.classList.remove("opacity-0", "translate-y-4");
-                popup.classList.add("opacity-100", "translate-y-0");
-
-                setTimeout(() => {
-                    popup.classList.add("opacity-0", "translate-y-4");
-                    popup.classList.remove("opacity-100", "translate-y-0");
-                }, 3000);
-            } else {
-                alert("Gagal mengirim pesan: " + (data.error || "Unknown error"));
+            if (!name) {
+                document.getElementById("nameError").classList.remove("hidden");
+                valid = false;
             }
-        } catch (err) {
-            alert("Gagal mengirim pesan: " + err.message);
-        }
-    });
-</script>
+            if (!email) {
+                document.getElementById("emailError").classList.remove("hidden");
+                valid = false;
+            }
+            if (!message) {
+                document.getElementById("messageError").classList.remove("hidden");
+                valid = false;
+            }
+
+            if (!valid) return;
+
+            try {
+                const res = await fetch("/api/send-message", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        message
+                    })
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    form.reset();
+
+                    popup.classList.remove("opacity-0", "translate-y-4");
+                    popup.classList.add("opacity-100", "translate-y-0");
+
+                    setTimeout(() => {
+                        popup.classList.add("opacity-0", "translate-y-4");
+                        popup.classList.remove("opacity-100", "translate-y-0");
+                    }, 3000);
+                } else {
+                    alert("Gagal mengirim pesan: " + (data.error || "Unknown error"));
+                }
+            } catch (err) {
+                alert("Gagal mengirim pesan: " + err.message);
+            }
+        });
+
+        fetch("/api/github")
+                .then(r => r.json())
+                .then(data => {
+                    repoCount.textContent = data.repos;
+                    followerCount.textContent = data.followers;
+                    commitThisYear.textContent = data.commits;
+                })
+                .catch(() => {
+                    repoCount.textContent = "–";
+                    followerCount.textContent = "–";
+                    commitThisYear.textContent = "–";
+                    });
+    </script>
 </body>
 
 </html>
