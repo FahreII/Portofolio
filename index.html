@@ -354,9 +354,6 @@
                     <div
                         class="p-8 rounded-3xl bg-sand shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer flex flex-col justify-between">
                         <h3 class="text-lg font-medium mb-2">Coding Time</h3>
-                        <p class="text-sm text-dark/70 mb-4">
-                            Akan terhubung dengan WakaTime untuk menampilkan jam ngoding.
-                        </p>
                         <h2 id="codingTime" class="text-3xl font-semibold text-olive">–</h2>
                     </div>
         
@@ -577,19 +574,28 @@
                     });
 
         fetch("/api/wakatime")
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById("codingTime").textContent = data.total_time;
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("codingTime").textContent = data.total_time || "0 sec";
 
-                const list = document.getElementById("languages");
-                list.innerHTML = "";
+                    const list = document.getElementById("languages");
+                    list.innerHTML = "";
 
-                data.languages.forEach(lang => {
-                    const li = document.createElement("li");
-                    li.textContent = `${lang.name} - ${lang.text}`;
-                    list.appendChild(li);
+                    if (data.languages && data.languages.length > 0) {
+                        data.languages.forEach(lang => {
+                            const li = document.createElement("li");
+                            li.textContent = `${lang.name} - ${lang.text}`;
+                            list.appendChild(li);
+                        });
+                    } else {
+                        list.innerHTML = "<li>Data belum tersedia</li>";
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById("codingTime").textContent = "0 sec";
+                    document.getElementById("languages").innerHTML = "<li>Data gagal fetch</li>";
                 });
-            });
     </script>
 </body>
 

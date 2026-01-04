@@ -1,3 +1,4 @@
+// File: /api/wakatime.js
 export default async function handler(req, res) {
   const API_KEY = process.env.WAKATIME_API_KEY;
 
@@ -17,17 +18,16 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: "Data WakaTime kosong" });
     }
 
+    // Pastikan field yang dipakai cumulative_total.text
     res.status(200).json({
-      // gunakan cumulative_total.text untuk total coding time
       total_time: data.data.cumulative_total.text || "0 sec",
-      // ambil top 5 languages
       languages: (data.data.languages || []).slice(0, 5).map((lang) => ({
         name: lang.name,
         text: lang.text,
       })),
     });
   } catch (err) {
-    console.error(err);
+    console.error("Error fetching WakaTime:", err);
     res.status(500).json({ error: "Gagal fetch data WakaTime" });
   }
 }
