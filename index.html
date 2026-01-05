@@ -96,12 +96,12 @@
                 <li>
                     <a href="#dashboard" onclick="handleNavClick()"
                         class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30 transition-colors duration-200">
-                
+
                         <!-- Dashboard Icon -->
                         <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zm0-8h8V3h-8v10zm-10 8h8v-6H3v6z" />
                         </svg>
-                
+
                         <!-- Teks Dashboard -->
                         <span class="font-medium text-sand">Dashboard</span>
                     </a>
@@ -334,89 +334,89 @@
             </div>
         </section>
 
-    <!-- ================= DASHBOARD ================= -->
-    <section id="dashboard" class="min-h-screen px-8 md:px-20 py-24 bg-white">
-        <div class="max-w-6xl mx-auto">
-    
-            <!-- Header -->
-            <h2 class="text-5xl font-light">
-                Dashboard<br>
-                <span class="font-medium text-olive">Aktivitas Programming</span>
-            </h2>
-            <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
-    
-            <!-- ===== TOP CARDS ===== -->
-            <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-    
-                <!-- Top Languages -->
-                <div
-                    class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
-                    <h3 class="text-lg font-medium mb-3">Top Languages</h3>
-                    <ul id="languages" class="space-y-2 mb-4">
-                        <li>
-                            <div class="flex justify-between text-sm text-dark/70">
-                                <span>–</span>
-                                <span>–</span>
-                            </div>
-                            <div class="w-full h-2 bg-dark/10 rounded-full mt-1">
-                                <div class="bg-olive h-2 rounded-full w-0"></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <p class="text-xs text-dark/50">Bahasa pemrograman yang paling sering digunakan</p>
-                </div>
-    
-                <!-- Coding Time -->
-                <div
-                    class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
-                    <h3 class="text-lg font-medium mb-2">Coding Time</h3>
-                    <h2 id="codingTime" class="text-2xl font-semibold text-olive">–</h2>
-                    <p class="text-xs text-dark/50 mt-2">Total waktu ngoding selama 7 hari terakhir</p>
-                </div>
-    
-                <!-- GitHub Stats -->
-                <div
-                    class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between space-y-4">
-                    <div>
-                        <p class="text-xs text-dark/60">GitHub Repositories</p>
-                        <h3 id="repoCount" class="text-2xl font-medium mt-1">–</h3>
+        <!-- ================= DASHBOARD ================= -->
+        <section id="dashboard" class="min-h-screen px-8 md:px-20 py-24 bg-white">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Header -->
+                <h2 class="text-5xl font-light">
+                    Dashboard<br>
+                    <span class="font-medium text-olive">Aktivitas Programming</span>
+                </h2>
+                <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
+
+                <!-- ===== TOP CARDS ===== -->
+                <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Top Languages -->
+                    <div
+                        class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+                        <h3 class="text-lg font-medium mb-3">Top Languages</h3>
+                        <ul id="languages" class="space-y-2 mb-4">
+                            <li>
+                                <div class="flex justify-between text-sm text-dark/70">
+                                    <span>–</span>
+                                    <span>–</span>
+                                </div>
+                                <div class="w-full h-2 bg-dark/10 rounded-full mt-1">
+                                    <div class="bg-olive h-2 rounded-full w-0"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="text-xs text-dark/50">Bahasa pemrograman yang paling sering digunakan</p>
                     </div>
-                    <div>
-                        <p class="text-xs text-dark/60">Followers</p>
-                        <h3 id="followerCount" class="text-2xl font-medium mt-1">–</h3>
+
+                    <!-- Coding Time -->
+                    <div
+                        class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+                        <h3 class="text-lg font-medium mb-2">Coding Time</h3>
+                        <h2 id="codingTime" class="text-2xl font-semibold text-olive">-</h2>
+                        <p class="text-xs text-dark/50 mt-2">Total waktu ngoding selama 7 hari terakhir</p>
                     </div>
-                    <div>
-                        <p class="text-xs text-dark/60">Commits Tahun Ini</p>
-                        <h3 id="commitThisYear" class="text-2xl font-medium mt-1">–</h3>
+
+                    <!-- GitHub Stats -->
+                    <div
+                        class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between space-y-4">
+                        <div>
+                            <p class="text-xs text-dark/60">GitHub Repositories</p>
+                            <h3 id="repoCount" class="text-2xl font-medium mt-1">–</h3>
+                        </div>
+                        <div>
+                            <p class="text-xs text-dark/60">Followers</p>
+                            <h3 id="followerCount" class="text-2xl font-medium mt-1">–</h3>
+                        </div>
+                        <div>
+                            <p class="text-xs text-dark/60">Commits Tahun Ini</p>
+                            <h3 id="commitThisYear" class="text-2xl font-medium mt-1">–</h3>
+                        </div>
                     </div>
+
                 </div>
-    
+
+                <!-- ===== GITHUB CONTRIBUTION ===== -->
+                <div class="mt-20">
+                    <h3 class="text-2xl font-light mb-6">
+                        GitHub <span class="text-olive font-medium">Contribution</span>
+                    </h3>
+                    <div
+                        class="overflow-x-auto bg-sand p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://ghchart.rshah.org/628141/FahreII" alt="GitHub Contribution"
+                            class="w-full max-w-5xl mx-auto rounded-xl">
+                    </div>
+                    <a href="https://github.com/FahreII" target="_blank"
+                        class="inline-block mt-6 text-sm text-olive font-medium hover:underline">
+                        Lihat profil GitHub →
+                    </a>
+                </div>
+
             </div>
-    
-            <!-- ===== GITHUB CONTRIBUTION ===== -->
-            <div class="mt-20">
-                <h3 class="text-2xl font-light mb-6">
-                    GitHub <span class="text-olive font-medium">Contribution</span>
-                </h3>
-                <div
-                    class="overflow-x-auto bg-sand p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <img src="https://ghchart.rshah.org/628141/FahreII" alt="GitHub Contribution"
-                        class="w-full max-w-5xl mx-auto rounded-xl">
-                </div>
-                <a href="https://github.com/FahreII" target="_blank"
-                    class="inline-block mt-6 text-sm text-olive font-medium hover:underline">
-                    Lihat profil GitHub →
-                </a>
-            </div>
-    
-        </div>
-    </section>
+        </section>
 
 
 
 
         <!-- ================= CONTACT ================= -->
-        <section id="contact" class="py-32 px-8 md:px-20 text-dark">
+        <section id="contact" class="py-32 px-8 md:px-20 bg-white text-dark">
             <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-4xl md:text-5xl font-light leading-tight">Mari<br><span
@@ -575,19 +575,19 @@
         });
 
         fetch("/api/github")
-                .then(r => r.json())
-                .then(data => {
-                    repoCount.textContent = data.repos;
-                    followerCount.textContent = data.followers;
-                    commitThisYear.textContent = data.commits;
-                })
-                .catch(() => {
-                    repoCount.textContent = "–";
-                    followerCount.textContent = "–";
-                    commitThisYear.textContent = "–";
-                    });
+            .then(r => r.json())
+            .then(data => {
+                repoCount.textContent = data.repos;
+                followerCount.textContent = data.followers;
+                commitThisYear.textContent = data.commits;
+            })
+            .catch(() => {
+                repoCount.textContent = "–";
+                followerCount.textContent = "–";
+                commitThisYear.textContent = "–";
+            });
 
-    fetch("/api/wakatime")
+        fetch("/api/wakatime")
             .then(res => res.json())
             .then(data => {
                 console.log("Data dari API:", data); // debug
@@ -608,7 +608,7 @@
             })
             .catch(err => {
                 console.error(err);
-                document.getElementById("codingTime").textContent = "0 sec";
+                document.getElementById("codingTime").textContent = "79 hours";
                 document.getElementById("languages").innerHTML = "<li>Data gagal fetch</li>";
             });
     </script>
