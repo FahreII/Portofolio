@@ -386,7 +386,7 @@
                             <h3 id="followerCount" class="text-2xl font-medium mt-1">–</h3>
                         </div>
                         <div>
-                            <p class="text-xs text-dark/60">Commits Tahun Ini</p>
+                            <p class="text-xs text-dark/60">Commits 12 Tahun terakhir</p>
                             <h3 id="commitThisYear" class="text-2xl font-medium mt-1">–</h3>
                         </div>
                     </div>
@@ -587,29 +587,42 @@
                 commitThisYear.textContent = "–";
             });
 
-        fetch("/api/wakatime")
-            .then(res => res.json())
-            .then(data => {
-                console.log("Data dari API:", data); // debug
-                document.getElementById("codingTime").textContent = data.total_time || "0 sec";
+      fetch("/api/wakatime")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("WakaTime:", data);
+
+                document.getElementById("codingTime").textContent =
+                    data.total_time || "0 sec";
 
                 const list = document.getElementById("languages");
                 list.innerHTML = "";
 
                 if (data.languages && data.languages.length > 0) {
-                    data.languages.forEach(lang => {
+                    data.languages.forEach((lang) => {
                         const li = document.createElement("li");
-                        li.textContent = `${lang.name} - ${lang.text}`;
+
+                        li.innerHTML = `
+            <div class="flex justify-between text-sm text-dark/70">
+              <span>${lang.name}</span>
+              <span>${lang.text}</span>
+            </div>
+            <div class="w-full h-2 bg-dark/10 rounded-full mt-1">
+              <div class="bg-olive h-2 rounded-full" style="width:${lang.percent}%"></div>
+            </div>
+          `;
+
                         list.appendChild(li);
                     });
                 } else {
-                    list.innerHTML = "<li>Data belum tersedia</li>";
+                    list.innerHTML = "<li>Data WakaTime belum tersedia</li>";
                 }
             })
-            .catch(err => {
-                console.error(err);
-                document.getElementById("codingTime").textContent = "79 hours";
-                document.getElementById("languages").innerHTML = "<li>Data gagal fetch</li>";
+            .catch((err) => {
+                console.error("Fetch error:", err);
+                document.getElementById("codingTime").textContent = "0 sec";
+                document.getElementById("languages").innerHTML =
+                    "<li>Gagal mengambil data WakaTime</li>";
             });
     </script>
 </body>
