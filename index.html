@@ -585,7 +585,7 @@
                 commitThisYear.textContent = "–";
             });
 
-      fetch("/api/wakatime")
+        fetch("/api/wakatime")
             .then((res) => res.json())
             .then((data) => {
                 console.log("WakaTime:", data);
