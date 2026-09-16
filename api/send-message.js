@@ -8,7 +8,8 @@ export default async function handler(req, res) {
   const BOT_TOKEN = process.env.BOT_TOKEN;
   const CHAT_ID = process.env.CHAT_ID;
   const text = `
-📩 PESAN BARU
+  
+📩 PESAN BARU DARI PORTOFOLIO
 👤 Nama: ${name}
 📧 Email: ${email}
 💬 Pesan: ${message}
