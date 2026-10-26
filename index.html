@@ -469,73 +469,97 @@
         </section>
 
         <!-- ================= DASHBOARD ================= -->
-        <section id="dashboard" class="min-h-screen px-8 md:px-20 py-24 bg-white">
+        <section id="dashboard" class="py-24 px-8 md:px-20 bg-dark text-sand">
             <div class="max-w-6xl mx-auto">
 
                 <!-- Header -->
-                <h2 class="text-5xl font-light">
-                    Dashboard<br>
-                    <span class="font-medium text-olive">Aktivitas Programming</span>
-                </h2>
-                <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
+                <div class="mb-14">
+                    <p class="text-xs tracking-widest text-moss uppercase mb-3">Live Stats</p>
+                    <h2 class="text-5xl font-light">
+                        Dashboard<br>
+                        <span class="font-semibold text-moss">Aktivitas Programming</span>
+                    </h2>
+                    <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
+                </div>
 
-                <!-- ===== TOP CARDS ===== -->
-                <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- ===== ROW 1: Coding Time + GitHub Stats ===== -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
 
-                    <!-- Top Languages -->
-                    <div
-                        class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-lg font-medium mb-5">Top Languages</h3>
-                        <div class="flex items-center gap-6 flex-1">
-                            <!-- Pie Chart Canvas -->
-                            <canvas id="langChart" width="150" height="150" class="shrink-0"></canvas>
-                            <!-- Legend -->
-                            <ul id="languages" class="space-y-2 flex-1 text-sm"></ul>
+                    <!-- Coding Time — card besar kiri -->
+                    <div class="md:col-span-1 bg-olive/20 border border-olive/30 rounded-3xl p-8 flex flex-col justify-between min-h-[180px] hover:bg-olive/25 transition-colors duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-xs tracking-widest text-moss uppercase">Coding Time</p>
+                            <!-- Ikon jam -->
+                            <svg class="w-5 h-5 text-moss fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"/>
+                            </svg>
                         </div>
-                        <p class="text-xs text-dark/50 mt-5">Bahasa pemrograman yang paling sering digunakan</p>
+                        <div>
+                            <h2 id="codingTime" class="text-4xl font-semibold text-sand">–</h2>
+                            <p class="text-xs text-sand/50 mt-2">Total 7 hari terakhir</p>
+                        </div>
                     </div>
 
-                    <!-- Coding Time -->
-                    <div
-                        class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
-                        <h3 class="text-lg font-medium mb-2">Coding Time</h3>
-                        <h2 id="codingTime" class="text-2xl font-semibold">-</h2>
-                        <p class="text-xs text-dark/50 mt-2">Total waktu coding selama 7 hari terakhir</p>
+                    <!-- GitHub Repos -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between min-h-[180px] hover:bg-white/10 transition-colors duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-xs tracking-widest text-moss uppercase">Repositories</p>
+                            <svg class="w-5 h-5 fill-moss" viewBox="0 0 24 24"><path d="M3 6.75A2.25 2.25 0 015.25 4.5h5.19a2.25 2.25 0 011.59.66l1.12 1.12H18.75A2.25 2.25 0 0121 8.53v8.72A2.25 2.25 0 0118.75 19.5H5.25A2.25 2.25 0 013 17.25V6.75z"/></svg>
+                        </div>
+                        <div>
+                            <h2 id="repoCount" class="text-4xl font-semibold text-sand">–</h2>
+                            <p class="text-xs text-sand/50 mt-2">Public repos di GitHub</p>
+                        </div>
                     </div>
 
-                    <!-- GitHub Stats -->
-                    <div
-                        class="p-6 md:p-8 rounded-3xl bg-sand shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between space-y-4">
-                        <div>
-                            <p class="text-xs text-dark/60">GitHub Repositories</p>
-                            <h3 id="repoCount" class="text-2xl font-medium mt-1">–</h3>
+                    <!-- GitHub Followers + Commits (stacked) -->
+                    <div class="flex flex-col gap-5">
+                        <div class="bg-white/5 border border-white/10 rounded-3xl px-8 py-6 flex items-center justify-between hover:bg-white/10 transition-colors duration-300">
+                            <div>
+                                <p class="text-xs tracking-widest text-moss uppercase mb-1">Followers</p>
+                                <h3 id="followerCount" class="text-3xl font-semibold text-sand">–</h3>
+                            </div>
+                            <svg class="w-6 h-6 fill-moss/60" viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 100-9 4.5 4.5 0 000 9zM3.75 20.25a8.25 8.25 0 0116.5 0"/></svg>
                         </div>
-                        <div>
-                            <p class="text-xs text-dark/60">Followers</p>
-                            <h3 id="followerCount" class="text-2xl font-medium mt-1">–</h3>
-                        </div>
-                        <div>
-                            <p class="text-xs text-dark/60">Commits 12 Bulan terakhir</p>
-                            <h3 id="commitThisYear" class="text-2xl font-medium mt-1">–</h3>
+                        <div class="bg-white/5 border border-white/10 rounded-3xl px-8 py-6 flex items-center justify-between hover:bg-white/10 transition-colors duration-300">
+                            <div>
+                                <p class="text-xs tracking-widest text-moss uppercase mb-1">Commits / Tahun</p>
+                                <h3 id="commitThisYear" class="text-3xl font-semibold text-sand">–</h3>
+                            </div>
+                            <svg class="w-6 h-6 fill-none stroke-moss/60" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- ===== GITHUB CONTRIBUTION ===== -->
-                <div class="mt-20">
-                    <h3 class="text-2xl font-light mb-6">
-                        GitHub <span class="text-olive font-medium">Contribution</span>
-                    </h3>
-                    <div
-                        class="overflow-x-auto bg-sand p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                        <img src="https://ghchart.rshah.org/628141/FahreII" alt="GitHub Contribution"
-                            class="w-full max-w-5xl mx-auto rounded-xl">
+                <!-- ===== ROW 2: Top Languages (pie) + GitHub Contribution ===== -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-5">
+
+                    <!-- Top Languages — pie chart -->
+                    <div class="md:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors duration-300">
+                        <p class="text-xs tracking-widest text-moss uppercase mb-5">Top Languages</p>
+                        <div class="flex items-center gap-6">
+                            <canvas id="langChart" width="150" height="150" class="shrink-0"></canvas>
+                            <ul id="languages" class="space-y-3 flex-1 text-sm"></ul>
+                        </div>
+                        <p class="text-xs text-sand/40 mt-5">Bahasa yang paling sering digunakan</p>
                     </div>
-                    <a href="https://github.com/FahreII" target="_blank"
-                        class="inline-block mt-6 text-sm text-olive font-medium hover:underline">
-                        Lihat profil GitHub →
-                    </a>
+
+                    <!-- GitHub Contribution chart -->
+                    <div class="md:col-span-3 bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors duration-300 flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-5">
+                            <p class="text-xs tracking-widest text-moss uppercase">GitHub Contribution</p>
+                            <a href="https://github.com/FahreII" target="_blank"
+                                class="text-xs text-moss hover:underline">
+                                Lihat profil →
+                            </a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <img src="https://ghchart.rshah.org/628141/FahreII" alt="GitHub Contribution"
+                                class="w-full rounded-xl opacity-90">
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -718,70 +742,110 @@
             '#F39C12', '#2ECC71', '#E74C3C', '#1ABC9C'
         ];
 
-        let _langData = [];
-        let _hoveredSlice = -1;
-        let _sliceAngles = [];
+        let _langData      = [];
+        let _hoveredSlice  = -1;
+        let _sliceAngles   = [];
+        let _expandProg    = [];   // 0..1 per slice (animasi smooth)
+        let _animFrame     = null;
 
-        function drawPieChart(languages, hovered = -1) {
+        // Easing: ease-out cubic
+        function easeOut(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
+        function drawPieChartFrame(languages, expandProg) {
             const canvas = document.getElementById('langChart');
             if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            const cx = canvas.width / 2;
-            const cy = canvas.height / 2;
+            const ctx    = canvas.getContext('2d');
+            const cx     = canvas.width / 2;
+            const cy     = canvas.height / 2;
             const radius = 62;
-            const expandBy = 10;
+            const maxExp = 10;
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             _sliceAngles = [];
 
             let startAngle = -Math.PI / 2;
             languages.forEach((lang, i) => {
-                const slice = (lang.percent / 100) * 2 * Math.PI;
+                const slice    = (lang.percent / 100) * 2 * Math.PI;
                 const midAngle = startAngle + slice / 2;
                 const endAngle = startAngle + slice;
-
-                // Geser irisan keluar jika di-hover
-                const dx = i === hovered ? Math.cos(midAngle) * expandBy : 0;
-                const dy = i === hovered ? Math.sin(midAngle) * expandBy : 0;
+                const prog     = easeOut(expandProg[i] || 0);
+                const dx       = Math.cos(midAngle) * maxExp * prog;
+                const dy       = Math.sin(midAngle) * maxExp * prog;
 
                 ctx.beginPath();
                 ctx.moveTo(cx + dx, cy + dy);
                 ctx.arc(cx + dx, cy + dy, radius, startAngle, endAngle);
                 ctx.closePath();
-                ctx.fillStyle = LANG_COLORS[i % LANG_COLORS.length];
+                ctx.fillStyle   = LANG_COLORS[i % LANG_COLORS.length];
                 ctx.fill();
-                // Garis pemisah tipis
-                ctx.strokeStyle = '#EBD5AB';
-                ctx.lineWidth = 2;
+                ctx.strokeStyle = '#1B211A';
+                ctx.lineWidth   = 2;
                 ctx.stroke();
 
                 _sliceAngles.push({ startAngle, endAngle, midAngle });
                 startAngle = endAngle;
             });
 
-            // Label di tengah
-            ctx.textAlign = 'center';
+            // Label tengah — fade in/out dengan globalAlpha
+            ctx.textAlign    = 'center';
             ctx.textBaseline = 'middle';
-            if (hovered >= 0 && languages[hovered]) {
-                ctx.fillStyle = '#1B211A';
-                ctx.font = 'bold 11px Poppins, sans-serif';
-                ctx.fillText(languages[hovered].name, cx, cy - 7);
-                ctx.font = '10px Poppins, sans-serif';
-                ctx.fillStyle = '#628141';
-                ctx.fillText(languages[hovered].percent.toFixed(1) + '%', cx, cy + 7);
-            } else if (languages.length > 0) {
-                ctx.fillStyle = '#1B211A';
-                ctx.font = 'bold 12px Poppins, sans-serif';
-                ctx.fillText(languages[0].name, cx, cy);
+            const maxProg    = Math.max(...expandProg);
+
+            if (_hoveredSlice >= 0 && languages[_hoveredSlice]) {
+                const p = easeOut(expandProg[_hoveredSlice] || 0);
+                ctx.globalAlpha = p;
+                ctx.fillStyle   = '#EBD5AB';
+                ctx.font        = 'bold 11px Poppins, sans-serif';
+                ctx.fillText(languages[_hoveredSlice].name, cx, cy - 7);
+                ctx.fillStyle   = '#8BAE66';
+                ctx.font        = '10px Poppins, sans-serif';
+                ctx.fillText(languages[_hoveredSlice].percent.toFixed(1) + '%', cx, cy + 7);
+                ctx.globalAlpha = 1;
             }
+
+            // Label default (nama bahasa terbesar) — fade out saat hover
+            if (languages.length > 0) {
+                ctx.globalAlpha = Math.max(0, 1 - maxProg * 2);
+                ctx.fillStyle   = '#EBD5AB';
+                ctx.font        = 'bold 12px Poppins, sans-serif';
+                ctx.fillText(languages[0].name, cx, cy);
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        function animatePie() {
+            const SPEED  = 0.10; // kecepatan lerp per frame (~60fps)
+            let needMore = false;
+
+            _expandProg = _expandProg.map((p, i) => {
+                const target = i === _hoveredSlice ? 1 : 0;
+                const next   = p + (target - p) * SPEED;
+                if (Math.abs(next - target) > 0.002) needMore = true;
+                return Math.abs(next - target) < 0.002 ? target : next;
+            });
+
+            drawPieChartFrame(_langData, _expandProg);
+
+            if (needMore) {
+                _animFrame = requestAnimationFrame(animatePie);
+            } else {
+                _animFrame = null;
+            }
+        }
+
+        function startAnim() {
+            if (_animFrame) cancelAnimationFrame(_animFrame);
+            _animFrame = requestAnimationFrame(animatePie);
         }
 
         function getHoveredSlice(canvas, e) {
             const rect = canvas.getBoundingClientRect();
-            const mx = e.clientX - rect.left;
-            const my = e.clientY - rect.top;
-            const cx = canvas.width / 2;
-            const cy = canvas.height / 2;
+            const mx   = e.clientX - rect.left;
+            const my   = e.clientY - rect.top;
+            const cx   = canvas.width / 2;
+            const cy   = canvas.height / 2;
 
             const dist = Math.sqrt((mx - cx) ** 2 + (my - cy) ** 2);
             if (dist > 74 || dist < 4) return -1;
@@ -805,18 +869,17 @@
                 const h = getHoveredSlice(canvas, e);
                 if (h !== _hoveredSlice) {
                     _hoveredSlice = h;
-                    drawPieChart(_langData, _hoveredSlice);
-                    // Highlight legend item yang sesuai
+                    startAnim();
                     document.querySelectorAll('#languages li').forEach((li, i) => {
-                        li.style.opacity = (_hoveredSlice === -1 || i === _hoveredSlice) ? '1' : '0.35';
-                        li.style.transition = 'opacity 0.2s';
+                        li.style.opacity    = (_hoveredSlice === -1 || i === _hoveredSlice) ? '1' : '0.35';
+                        li.style.transition = 'opacity 0.25s ease';
                     });
                 }
             });
 
             canvas.addEventListener('mouseleave', () => {
                 _hoveredSlice = -1;
-                drawPieChart(_langData, -1);
+                startAnim();
                 document.querySelectorAll('#languages li').forEach(li => {
                     li.style.opacity = '1';
                 });
@@ -835,8 +898,9 @@
                 list.innerHTML = "";
 
                 if (data.languages && data.languages.length > 0) {
-                    _langData = data.languages;
-                    drawPieChart(_langData);
+                    _langData     = data.languages;
+                    _expandProg   = new Array(_langData.length).fill(0);
+                    drawPieChartFrame(_langData, _expandProg);
                     attachPieHover();
 
                     data.languages.forEach((lang, i) => {
@@ -844,9 +908,9 @@
                         li.innerHTML = `
                             <div class="flex items-center gap-2">
                                 <span class="w-3 h-3 rounded-full shrink-0" style="background:${LANG_COLORS[i % LANG_COLORS.length]}"></span>
-                                <span class="text-dark/80 truncate">${lang.name}</span>
+                                <span class="text-sand/80 truncate">${lang.name}</span>
                             </div>
-                            <div class="ml-5 text-xs text-dark/50">${lang.text} (${lang.percent.toFixed(2)}%)</div>
+                            <div class="ml-5 text-xs text-sand/40">${lang.text} (${lang.percent.toFixed(2)}%)</div>
                         `;
                         list.appendChild(li);
                     });
