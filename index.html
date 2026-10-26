@@ -23,7 +23,7 @@
                         poppins: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        dark: "#1B211A",
+                        dark: "#141913",
                         olive: "#628141",
                         moss: "#8BAE66",
                         sand: "#EBD5AB",
@@ -40,20 +40,20 @@
     </style>
 </head>
 
-<body class="bg-sand text-dark font-poppins">
+<body class="bg-dark text-white font-poppins antialiased selection:bg-moss selection:text-dark">
 
     <!-- ================= SIDEBAR ================= -->
-    <aside id="sidebar" class="fixed top-0 left-0 h-screen w-full md:w-64 bg-dark text-sand z-50 
+    <aside id="sidebar" class="fixed top-0 left-0 h-screen w-full md:w-64 bg-dark text-white border-r border-white/10 z-50 
             -translate-x-full md:-translate-x-64 transition-transform duration-300">
 
-        <div class="px-6 py-8 border-b border-olive/40 text-center relative">
-            <button onclick="toggleSidebar()" class="absolute top-4 right-4 text-xl">&times;</button>
+        <div class="px-6 py-8 border-b border-white/10 text-center relative">
+            <button onclick="toggleSidebar()" class="absolute top-4 right-4 text-xl text-zinc-400 hover:text-white">&times;</button>
 
-            <div class="mx-auto flex items-center justify-center text-olive text-sm">
-                <img src="aset/abitien ahmad fahrel.png" alt="" class="w-20 h-20">
+            <div class="mx-auto flex items-center justify-center">
+                <img src="aset/abitien ahmad fahrel.png" alt="Abitien" class="w-20 h-20 rounded-full border-2 border-white/20 object-cover">
             </div>
 
-            <h3 class="mt-1 text-sm font-medium tracking-wide">
+            <h3 class="mt-3 text-sm font-medium tracking-wide text-white">
                 Abitien Ahmad Fahrel
             </h3>
         </div>
@@ -63,8 +63,8 @@
 
                 <li>
                     <a href="#home" onclick="handleNavClick()"
-                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
-                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
+                        class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                             <path
                                 d="M3 10.5L12 3l9 7.5V21a1.5 1.5 0 01-1.5 1.5H15a1.5 1.5 0 01-1.5-1.5v-4.5h-3V21A1.5 1.5 0 019 22.5H4.5A1.5 1.5 0 013 21V10.5z" />
                         </svg>
@@ -74,8 +74,8 @@
 
                 <li>
                     <a href="#about" onclick="handleNavClick()"
-                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
-                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
+                        class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                             <path d="M12 12a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" />
                             <path d="M3.75 20.25a8.25 8.25 0 0116.5 0" />
                         </svg>
@@ -85,8 +85,8 @@
 
                 <li>
                     <a href="#certificates" onclick="handleNavClick()"
-                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
-                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
+                        class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                             <path
                                 d="M12 1.5l3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 16.9l-6.18 3.6L7 13.63l-5-4.87 6.91-1L12 1.5z" />
                         </svg>
@@ -96,8 +96,8 @@
 
                 <li>
                     <a href="#projects" onclick="handleNavClick()"
-                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
-                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
+                        class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                             <path
                                 d="M3 6.75A2.25 2.25 0 015.25 4.5h5.19a2.25 2.25 0 011.59.66l1.12 1.12H18.75A2.25 2.25 0 0121 8.53v8.72A2.25 2.25 0 0118.75 19.5H5.25A2.25 2.25 0 013 17.25V6.75z" />
                         </svg>
@@ -107,20 +107,20 @@
 
                 <li>
                     <a href="#dashboard" onclick="handleNavClick()"
-                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30 transition-colors duration-200">
+                        class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors">
                         <!-- Dashboard Icon -->
-                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zm0-8h8V3h-8v10zm-10 8h8v-6H3v6z" />
                         </svg>
                         <!-- Teks Dashboard -->
-                        <span class="font-medium text-sand">Dashboard</span>
+                        <span class="font-medium">Dashboard</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#contact" onclick="handleNavClick()"
-                        class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-olive/30">
-                        <svg class="w-5 h-5 fill-sand" viewBox="0 0 24 24">
+                        class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                             <path
                                 d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-2.182a2.25 2.25 0 00-1.386-2.073l-2.76-1.104a2.25 2.25 0 00-2.61.72l-.86 1.147a12.05 12.05 0 01-5.32-5.32l1.147-.86a2.25 2.25 0 00.72-2.61l-1.104-2.76A2.25 2.25 0 006.432 2.25H4.25A2.25 2.25 0 002 4.5v2.25z" />
                         </svg>
@@ -131,8 +131,8 @@
             </ul>
 
             <!-- SIDEBAR FOOTER -->
-            <div class="mt-auto px-6 pb-6 text-xs text-sand/70">
-                <div class="border-t border-sand/20 pt-4">
+            <div class="mt-auto px-6 pb-6 text-xs text-zinc-400">
+                <div class="border-t border-white/10 pt-4">
                     <p>
                         COPYRIGHT © 2026<br>
                         Abitien Ahmad Fahrel.
@@ -143,42 +143,42 @@
     </aside>
 
     <!-- ================= OPEN BUTTON ================= -->
-    <button id="openBtn" onclick="toggleSidebar()" class="fixed top-4 left-4 z-50 bg-dark text-sand px-4 py-2 rounded">
+    <button id="openBtn" onclick="toggleSidebar()" class="fixed top-4 left-4 z-50 bg-dark text-white border border-white/20 hover:border-moss px-4 py-2 rounded-lg shadow-lg">
         ☰
     </button>
 
     <!-- ================= MAIN CONTENT ================= -->
     <main id="main" class="transition-all duration-300 ml-0">
 
-        <!-- ================= HOME ================= -->
-        <section id="home" class="min-h-screen flex items-center px-8 md:px-20 relative overflow-hidden">
+        <!-- ================= SECTION 1: HOME (HITAM / DARK) ================= -->
+        <section id="home" class="min-h-screen flex items-center px-8 md:px-20 bg-dark text-white relative overflow-hidden">
 
             <!-- Background decoration -->
-            <div class="absolute top-0 right-0 w-96 h-96 bg-olive/5 rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-            <div class="absolute bottom-0 left-1/3 w-64 h-64 bg-moss/5 rounded-full translate-y-1/2 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-olive/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-1/4 w-72 h-72 bg-moss/10 rounded-full blur-3xl translate-y-1/2 pointer-events-none"></div>
 
-            <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
 
                 <!-- Kiri: Teks -->
                 <div>
-                    <span class="inline-block text-xs tracking-widest uppercase text-olive border border-olive/40 px-4 py-1 rounded-full mb-6">
+                    <span class="inline-block text-xs tracking-widest uppercase text-moss border border-moss/40 bg-moss/10 px-4 py-1.5 rounded-full mb-6 font-medium">
                         Open to Work
                     </span>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight tracking-tight">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight tracking-tight text-white">
                         Abitien<br>
-                        <span class="text-olive font-semibold">Ahmad</span><br>
+                        <span class="text-moss font-semibold">Ahmad</span><br>
                         Fahrel.
                     </h1>
-                    <p class="mt-6 text-sm md:text-base text-dark/60 leading-relaxed max-w-sm">
+                    <p class="mt-6 text-sm md:text-base text-zinc-400 leading-relaxed max-w-sm">
                         Game Developer · Frontend Developer · UI/UX — membangun pengalaman digital yang bermakna.
                     </p>
                     <div class="mt-10 flex flex-wrap gap-4">
                         <a href="#projects"
-                            class="px-6 py-3 bg-olive text-white text-sm rounded-full hover:bg-moss transition-colors duration-300">
+                            class="px-6 py-3 bg-olive text-white text-sm font-medium rounded-full hover:bg-moss transition-colors duration-300 shadow-md">
                             Lihat Projects →
                         </a>
                         <a href="#contact"
-                            class="px-6 py-3 border border-olive/50 text-olive text-sm rounded-full hover:bg-olive/10 transition-colors duration-300">
+                            class="px-6 py-3 border border-white/20 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-colors duration-300">
                             Hubungi Saya
                         </a>
                     </div>
@@ -188,13 +188,13 @@
                 <div class="relative flex justify-center md:justify-end">
                     <div class="relative w-72 h-72 md:w-80 md:h-80">
                         <!-- Lingkaran dekorasi -->
-                        <div class="absolute inset-0 rounded-full border-2 border-olive/20 scale-110"></div>
-                        <div class="absolute inset-0 rounded-full border border-olive/10 scale-125"></div>
+                        <div class="absolute inset-0 rounded-full border border-white/10 scale-110"></div>
+                        <div class="absolute inset-0 rounded-full border border-olive/30 scale-125"></div>
                         <!-- Foto -->
                         <img src="aset/abitien ahmad fahrel.png" alt="Abitien Ahmad Fahrel"
-                            class="w-full h-full object-cover rounded-full border-4 border-sand shadow-xl">
+                            class="w-full h-full object-cover rounded-full border-4 border-sand ring-4 ring-olive/40 shadow-2xl">
                         <!-- Badge -->
-                        <div class="absolute -bottom-2 -left-4 bg-dark text-sand text-xs px-4 py-2 rounded-2xl shadow-lg">
+                        <div class="absolute -bottom-2 -left-4 bg-sand text-dark font-medium text-xs px-4 py-2 rounded-2xl shadow-xl">
                             18 y.o Developer 🎮
                         </div>
                     </div>
@@ -203,15 +203,15 @@
             </div>
         </section>
 
-        <!-- ================= ABOUT ================= -->
-        <section id="about" class="py-32 px-8 md:px-20 bg-white">
+        <!-- ================= SECTION 2: ABOUT (PUTIH / WHITE) ================= -->
+        <section id="about" class="py-32 px-8 md:px-20 bg-white text-dark">
             <div class="max-w-6xl mx-auto">
 
                 <!-- Header -->
                 <div class="mb-16">
-                    <p class="text-xs tracking-widest text-olive uppercase mb-3">Tentang</p>
+                    <p class="text-xs tracking-widest text-olive uppercase mb-3 font-semibold">Tentang</p>
                     <h2 class="text-5xl md:text-6xl font-light leading-tight text-dark">
-                        Siapa <span class="text-moss font-semibold">Saya?</span>
+                        Siapa <span class="text-olive font-semibold">Saya?</span>
                     </h2>
                     <div class="mt-4 w-16 h-1 bg-olive rounded-full"></div>
                 </div>
@@ -220,13 +220,13 @@
 
                     <!-- Kiri: Bio -->
                     <div class="md:col-span-2 space-y-6">
-                        <p class="text-sm md:text-base leading-relaxed text-dark/75">
+                        <p class="text-sm md:text-base leading-relaxed text-dark/80">
                             Saya <span class="font-semibold text-dark">Abitien Ahmad Fahrel</span>, berusia 18 tahun.
                             Ketertarikan saya pada dunia
                             <span class="text-olive font-medium">game development</span> dimulai sejak 2020,
                             yang mendorong saya mempelajari pemrograman saat kelas 3 SMA.
                         </p>
-                        <p class="text-sm md:text-base leading-relaxed text-dark/75">
+                        <p class="text-sm md:text-base leading-relaxed text-dark/80">
                             Selain mengembangkan game, saya juga memiliki minat pada bidang
                             <span class="text-olive font-medium">frontend</span> dan
                             <span class="text-olive font-medium">UI/UX</span>.
@@ -234,13 +234,13 @@
 
                         <!-- Stats kecil -->
                         <div class="grid grid-cols-2 gap-4 pt-4">
-                            <div class="bg-sand rounded-2xl p-4 text-center">
+                            <div class="bg-sand text-dark rounded-2xl p-4 text-center border border-olive/30 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all">
                                 <p class="text-2xl font-semibold text-olive">6+</p>
-                                <p class="text-xs text-dark/60 mt-1">Tahun Belajar</p>
+                                <p class="text-xs text-dark/70 mt-1 font-medium">Tahun Belajar</p>
                             </div>
-                            <div class="bg-sand rounded-2xl p-4 text-center">
+                            <div class="bg-sand text-dark rounded-2xl p-4 text-center border border-olive/30 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all">
                                 <p class="text-2xl font-semibold text-olive">10+</p>
-                                <p class="text-xs text-dark/60 mt-1">Tools Dikuasai</p>
+                                <p class="text-xs text-dark/70 mt-1 font-medium">Tools Dikuasai</p>
                             </div>
                         </div>
                     </div>
@@ -249,66 +249,66 @@
                     <div class="md:col-span-3 space-y-6">
 
                         <!-- Web & Programming -->
-                        <div class="bg-sand rounded-2xl p-6">
-                            <h4 class="text-xs tracking-widest text-olive uppercase mb-4">Web & Programming</h4>
+                        <div class="bg-sand text-dark rounded-2xl p-6 border border-olive/30 shadow-sm hover:shadow-md transition-all">
+                            <h4 class="text-xs tracking-widest text-olive uppercase mb-4 font-semibold">Web & Programming</h4>
                             <div class="flex flex-wrap gap-5">
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">HTML</span>
+                                    <span class="text-xs text-dark/70 font-medium">HTML</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">CSS</span>
+                                    <span class="text-xs text-dark/70 font-medium">CSS</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">JS</span>
+                                    <span class="text-xs text-dark/70 font-medium">JS</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">Python</span>
+                                    <span class="text-xs text-dark/70 font-medium">Python</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">C#</span>
+                                    <span class="text-xs text-dark/70 font-medium">C#</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Game Development -->
-                        <div class="bg-sand rounded-2xl p-6">
-                            <h4 class="text-xs tracking-widest text-olive uppercase mb-4">Game Development</h4>
+                        <div class="bg-sand text-dark rounded-2xl p-6 border border-olive/30 shadow-sm hover:shadow-md transition-all">
+                            <h4 class="text-xs tracking-widest text-olive uppercase mb-4 font-semibold">Game Development</h4>
                             <div class="flex flex-wrap gap-5">
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">Unity</span>
+                                    <span class="text-xs text-dark/70 font-medium">Unity</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" alt="Godot" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">Godot</span>
+                                    <span class="text-xs text-dark/70 font-medium">Godot</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://latestlogo.com/wp-content/uploads/2025/04/roblox-studio-scaled.png" alt="Roblox Studio" class="w-9 h-9 object-contain">
-                                    <span class="text-xs text-dark/60">Roblox</span>
+                                    <span class="text-xs text-dark/70 font-medium">Roblox</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Design & Tools -->
-                        <div class="bg-sand rounded-2xl p-6">
-                            <h4 class="text-xs tracking-widest text-olive uppercase mb-4">Design & Tools</h4>
+                        <div class="bg-sand text-dark rounded-2xl p-6 border border-olive/30 shadow-sm hover:shadow-md transition-all">
+                            <h4 class="text-xs tracking-widest text-olive uppercase mb-4 font-semibold">Design & Tools</h4>
                             <div class="flex flex-wrap gap-5">
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">Figma</span>
+                                    <span class="text-xs text-dark/70 font-medium">Figma</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender" class="w-9 h-9">
-                                    <span class="text-xs text-dark/60">Blender</span>
+                                    <span class="text-xs text-dark/70 font-medium">Blender</span>
                                 </div>
                                 <div class="flex flex-col items-center gap-2">
                                     <img src="https://vectorseek.com/wp-content/uploads/2023/11/Aseprite-Logo-Vector.svg-.png" alt="Aseprite" class="w-9 h-9 object-contain">
-                                    <span class="text-xs text-dark/60">Aseprite</span>
+                                    <span class="text-xs text-dark/70 font-medium">Aseprite</span>
                                 </div>
                             </div>
                         </div>
@@ -318,17 +318,17 @@
             </div>
         </section>
 
-        <!-- ================= CERTIFICATES ================= -->
-        <section id="certificates" class="py-32 px-8 md:px-20 bg-sand text-dark">
+        <!-- ================= SECTION 3: CERTIFICATES (HITAM / DARK) ================= -->
+        <section id="certificates" class="py-32 px-8 md:px-20 bg-dark text-white border-t border-b border-white/5">
             <div class="max-w-6xl mx-auto">
 
                 <!-- Header -->
                 <div class="mb-16">
-                    <p class="text-xs tracking-widest text-olive uppercase mb-3">Pencapaian</p>
+                    <p class="text-xs tracking-widest text-moss uppercase mb-3 font-semibold">Pencapaian</p>
                     <h2 class="text-5xl md:text-6xl font-light leading-tight">
-                        <span class="font-semibold text-olive">Sertifikat</span>
+                        <span class="font-semibold text-moss">Sertifikat</span>
                     </h2>
-                    <p class="mt-4 text-sm text-dark/60 max-w-xl">
+                    <p class="mt-4 text-sm text-zinc-400 max-w-xl">
                         Beberapa sertifikat yang telah saya peroleh dari pelatihan,
                         kursus, dan kompetisi yang pernah saya ikuti.
                     </p>
@@ -338,44 +338,44 @@
                 <div class="space-y-6">
 
                     <!-- Sertifikat 1 -->
-                    <div class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row overflow-hidden">
-                        <div class="md:w-64 shrink-0 bg-dark/5 overflow-hidden">
+                    <div class="group bg-white/5 border border-white/10 hover:border-olive/50 hover:bg-white/10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row overflow-hidden">
+                        <div class="md:w-72 shrink-0 bg-white/[0.03] overflow-hidden flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-white/10">
                             <img src="aset/Sartifikat fundamental algoritma.png" alt="Sertifikat Fundamental Algoritma"
-                                class="w-full h-48 md:h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500">
+                                class="w-full h-48 md:h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-xl">
                         </div>
-                        <div class="flex flex-col justify-center p-8 border-l-0 md:border-l border-olive/10">
-                            <p class="text-xs tracking-widest text-olive uppercase mb-2">25 April 2026</p>
-                            <h3 class="text-xl font-semibold mb-1">Fundamental Algoritma</h3>
-                            <p class="text-sm text-dark/50 mb-4">Diterbitkan oleh: Coding Studio</p>
-                            <span class="inline-block text-xs px-3 py-1 bg-olive/10 text-olive rounded-full w-fit">Programming</span>
+                        <div class="flex flex-col justify-center p-8">
+                            <p class="text-xs tracking-widest text-moss uppercase mb-2 font-medium">25 April 2026</p>
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-white group-hover:text-moss transition-colors">Fundamental Algoritma</h3>
+                            <p class="text-sm text-zinc-400 mb-5">Diterbitkan oleh: Coding Studio</p>
+                            <span class="inline-block text-xs px-3.5 py-1.5 bg-olive/20 text-moss border border-olive/30 rounded-full w-fit font-medium">Programming</span>
                         </div>
                     </div>
 
                     <!-- Sertifikat 2 -->
-                    <div class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row overflow-hidden">
-                        <div class="md:w-64 shrink-0 bg-dark/5 overflow-hidden">
+                    <div class="group bg-white/5 border border-white/10 hover:border-olive/50 hover:bg-white/10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row overflow-hidden">
+                        <div class="md:w-72 shrink-0 bg-white/[0.03] overflow-hidden flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-white/10">
                             <img src="aset/membuat game 2d.png" alt="Sertifikat Membuat Game 2D Bagi Pemula"
-                                class="w-full h-48 md:h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500">
+                                class="w-full h-48 md:h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-xl">
                         </div>
-                        <div class="flex flex-col justify-center p-8 border-l-0 md:border-l border-olive/10">
-                            <p class="text-xs tracking-widest text-olive uppercase mb-2">20 Juni 2026</p>
-                            <h3 class="text-xl font-semibold mb-1">Membuat Game 2D Bagi Pemula</h3>
-                            <p class="text-sm text-dark/50 mb-4">Diterbitkan oleh: Coding Studio</p>
-                            <span class="inline-block text-xs px-3 py-1 bg-olive/10 text-olive rounded-full w-fit">Game Development</span>
+                        <div class="flex flex-col justify-center p-8">
+                            <p class="text-xs tracking-widest text-moss uppercase mb-2 font-medium">20 Juni 2026</p>
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-white group-hover:text-moss transition-colors">Membuat Game 2D Bagi Pemula</h3>
+                            <p class="text-sm text-zinc-400 mb-5">Diterbitkan oleh: Coding Studio</p>
+                            <span class="inline-block text-xs px-3.5 py-1.5 bg-olive/20 text-moss border border-olive/30 rounded-full w-fit font-medium">Game Development</span>
                         </div>
                     </div>
 
                     <!-- Sertifikat 3 -->
-                    <div class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row overflow-hidden">
-                        <div class="md:w-64 shrink-0 bg-dark/5 overflow-hidden">
+                    <div class="group bg-white/5 border border-white/10 hover:border-olive/50 hover:bg-white/10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row overflow-hidden">
+                        <div class="md:w-72 shrink-0 bg-white/[0.03] overflow-hidden flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-white/10">
                             <img src="aset/sertifikat3.jpg" alt="Sertifikat 3"
-                                class="w-full h-48 md:h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500">
+                                class="w-full h-48 md:h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-xl">
                         </div>
-                        <div class="flex flex-col justify-center p-8 border-l-0 md:border-l border-olive/10">
-                            <p class="text-xs tracking-widest text-olive uppercase mb-2">2026</p>
-                            <h3 class="text-xl font-semibold mb-1">Nama Sertifikat 3</h3>
-                            <p class="text-sm text-dark/50 mb-4">Diterbitkan oleh: Penerbit</p>
-                            <span class="inline-block text-xs px-3 py-1 bg-olive/10 text-olive rounded-full w-fit">Kategori</span>
+                        <div class="flex flex-col justify-center p-8">
+                            <p class="text-xs tracking-widest text-moss uppercase mb-2 font-medium">2026</p>
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-white group-hover:text-moss transition-colors">Nama Sertifikat 3</h3>
+                            <p class="text-sm text-zinc-400 mb-5">Diterbitkan oleh: Penerbit</p>
+                            <span class="inline-block text-xs px-3.5 py-1.5 bg-olive/20 text-moss border border-olive/30 rounded-full w-fit font-medium">Kategori</span>
                         </div>
                     </div>
 
@@ -383,13 +383,13 @@
             </div>
         </section>
 
-        <!-- ================= PROJECTS ================= -->
+        <!-- ================= SECTION 4: PROJECTS (PUTIH / WHITE) ================= -->
         <section id="projects" class="py-32 px-8 md:px-20 bg-white text-dark">
             <div class="max-w-6xl mx-auto">
 
                 <!-- Header -->
                 <div class="mb-20">
-                    <p class="text-xs tracking-widest text-olive uppercase mb-3">Karya</p>
+                    <p class="text-xs tracking-widest text-olive uppercase mb-3 font-semibold">Karya</p>
                     <h2 class="text-5xl md:text-6xl font-light leading-tight">
                         <span class="font-semibold text-olive">Projects</span>
                     </h2>
@@ -403,7 +403,7 @@
                 <div class="space-y-8">
 
                     <!-- Project 1 -->
-                    <div class="group bg-sand rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="group bg-sand text-dark border border-olive/30 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500">
                         <div class="grid md:grid-cols-2">
                             <!-- Gambar -->
                             <div class="overflow-hidden bg-dark/5 h-64 md:h-auto">
@@ -412,21 +412,21 @@
                             </div>
                             <!-- Info -->
                             <div class="p-10 flex flex-col justify-center">
-                                <p class="text-xs tracking-widest text-olive uppercase mb-3">Project 01</p>
-                                <h3 class="text-2xl md:text-3xl font-semibold mb-4 leading-snug">
+                                <p class="text-xs tracking-widest text-olive uppercase mb-3 font-semibold">Project 01</p>
+                                <h3 class="text-2xl md:text-3xl font-semibold mb-4 leading-snug text-dark">
                                     Sistem Login Aplikasi
                                 </h3>
-                                <p class="text-sm text-dark/65 leading-relaxed mb-6">
+                                <p class="text-sm text-dark/75 leading-relaxed mb-6">
                                     Aplikasi login berbasis Python Tkinter dengan validasi input,
                                     penanganan error, dan struktur kode yang rapi untuk simulasi
                                     sistem autentikasi sederhana.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-8">
-                                    <span class="text-xs px-3 py-1 bg-olive/15 text-olive rounded-full">Python</span>
-                                    <span class="text-xs px-3 py-1 bg-olive/15 text-olive rounded-full">Tkinter</span>
+                                    <span class="text-xs px-3.5 py-1 bg-olive/15 text-olive rounded-full font-medium border border-olive/20">Python</span>
+                                    <span class="text-xs px-3.5 py-1 bg-olive/15 text-olive rounded-full font-medium border border-olive/20">Tkinter</span>
                                 </div>
                                 <a href="aset/Sistem Login.jpg"
-                                    class="inline-flex items-center gap-2 text-sm font-medium text-olive hover:text-white hover:bg-olive px-5 py-2.5 rounded-full border border-olive/40 transition-all duration-300 w-fit">
+                                    class="inline-flex items-center gap-2 text-sm font-medium text-white bg-olive hover:bg-moss px-6 py-2.5 rounded-full transition-all duration-300 w-fit shadow-md">
                                     View Project <span class="group-hover:translate-x-1 transition-transform">→</span>
                                 </a>
                             </div>
@@ -434,25 +434,25 @@
                     </div>
 
                     <!-- Project 2 -->
-                    <div class="group bg-sand rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="group bg-sand text-dark border border-olive/30 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500">
                         <div class="grid md:grid-cols-2">
                             <!-- Info (kiri di desktop) -->
                             <div class="p-10 flex flex-col justify-center md:order-1 order-2">
-                                <p class="text-xs tracking-widest text-olive uppercase mb-3">Project 02</p>
-                                <h3 class="text-2xl md:text-3xl font-semibold mb-4 leading-snug">
+                                <p class="text-xs tracking-widest text-olive uppercase mb-3 font-semibold">Project 02</p>
+                                <h3 class="text-2xl md:text-3xl font-semibold mb-4 leading-snug text-dark">
                                     Website Pariwisata
                                 </h3>
-                                <p class="text-sm text-dark/65 leading-relaxed mb-6">
+                                <p class="text-sm text-dark/75 leading-relaxed mb-6">
                                     Website informatif pariwisata dengan struktur konten rapi,
                                     navigasi jelas, serta dilengkapi fitur rating untuk tour guide.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-8">
-                                    <span class="text-xs px-3 py-1 bg-olive/15 text-olive rounded-full">HTML</span>
-                                    <span class="text-xs px-3 py-1 bg-olive/15 text-olive rounded-full">CSS</span>
-                                    <span class="text-xs px-3 py-1 bg-olive/15 text-olive rounded-full">JavaScript</span>
+                                    <span class="text-xs px-3.5 py-1 bg-olive/15 text-olive rounded-full font-medium border border-olive/20">HTML</span>
+                                    <span class="text-xs px-3.5 py-1 bg-olive/15 text-olive rounded-full font-medium border border-olive/20">CSS</span>
+                                    <span class="text-xs px-3.5 py-1 bg-olive/15 text-olive rounded-full font-medium border border-olive/20">JavaScript</span>
                                 </div>
                                 <a href="https://majelis-tour.vercel.app/" target="_blank"
-                                    class="inline-flex items-center gap-2 text-sm font-medium text-olive hover:text-white hover:bg-olive px-5 py-2.5 rounded-full border border-olive/40 transition-all duration-300 w-fit">
+                                    class="inline-flex items-center gap-2 text-sm font-medium text-white bg-olive hover:bg-moss px-6 py-2.5 rounded-full transition-all duration-300 w-fit shadow-md">
                                     View Project <span class="group-hover:translate-x-1 transition-transform">→</span>
                                 </a>
                             </div>
@@ -468,13 +468,13 @@
             </div>
         </section>
 
-        <!-- ================= DASHBOARD ================= -->
-        <section id="dashboard" class="py-24 px-8 md:px-20 bg-dark text-sand">
+        <!-- ================= SECTION 5: DASHBOARD (HITAM / DARK) ================= -->
+        <section id="dashboard" class="py-24 px-8 md:px-20 bg-dark text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto">
 
                 <!-- Header -->
                 <div class="mb-14">
-                    <p class="text-xs tracking-widest text-moss uppercase mb-3">Live Stats</p>
+                    <p class="text-xs tracking-widest text-moss uppercase mb-3 font-semibold">Live Stats</p>
                     <h2 class="text-5xl font-light">
                         Dashboard<br>
                         <span class="font-semibold text-moss">Aktivitas Programming</span>
@@ -495,8 +495,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h2 id="codingTime" class="text-4xl font-semibold text-sand">–</h2>
-                            <p class="text-xs text-sand/50 mt-2">Total 7 hari terakhir</p>
+                            <h2 id="codingTime" class="text-4xl font-semibold text-white">–</h2>
+                            <p class="text-xs text-zinc-400 mt-2">Total 7 hari terakhir</p>
                         </div>
                     </div>
 
@@ -507,8 +507,8 @@
                             <svg class="w-5 h-5 fill-moss" viewBox="0 0 24 24"><path d="M3 6.75A2.25 2.25 0 015.25 4.5h5.19a2.25 2.25 0 011.59.66l1.12 1.12H18.75A2.25 2.25 0 0121 8.53v8.72A2.25 2.25 0 0118.75 19.5H5.25A2.25 2.25 0 013 17.25V6.75z"/></svg>
                         </div>
                         <div>
-                            <h2 id="repoCount" class="text-4xl font-semibold text-sand">–</h2>
-                            <p class="text-xs text-sand/50 mt-2">Public repos di GitHub</p>
+                            <h2 id="repoCount" class="text-4xl font-semibold text-white">–</h2>
+                            <p class="text-xs text-zinc-400 mt-2">Public repos di GitHub</p>
                         </div>
                     </div>
 
@@ -517,14 +517,14 @@
                         <div class="bg-white/5 border border-white/10 rounded-3xl px-8 py-6 flex items-center justify-between hover:bg-white/10 transition-colors duration-300">
                             <div>
                                 <p class="text-xs tracking-widest text-moss uppercase mb-1">Followers</p>
-                                <h3 id="followerCount" class="text-3xl font-semibold text-sand">–</h3>
+                                <h3 id="followerCount" class="text-3xl font-semibold text-white">–</h3>
                             </div>
                             <svg class="w-6 h-6 fill-moss/60" viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 100-9 4.5 4.5 0 000 9zM3.75 20.25a8.25 8.25 0 0116.5 0"/></svg>
                         </div>
                         <div class="bg-white/5 border border-white/10 rounded-3xl px-8 py-6 flex items-center justify-between hover:bg-white/10 transition-colors duration-300">
                             <div>
                                 <p class="text-xs tracking-widest text-moss uppercase mb-1">Commits / Tahun</p>
-                                <h3 id="commitThisYear" class="text-3xl font-semibold text-sand">–</h3>
+                                <h3 id="commitThisYear" class="text-3xl font-semibold text-white">–</h3>
                             </div>
                             <svg class="w-6 h-6 fill-none stroke-moss/60" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
@@ -537,18 +537,18 @@
 
                     <!-- Top Languages — pie chart -->
                     <div class="md:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors duration-300">
-                        <p class="text-xs tracking-widest text-moss uppercase mb-5">Top Languages</p>
+                        <p class="text-xs tracking-widest text-moss uppercase mb-5 font-semibold">Top Languages</p>
                         <div class="flex items-center gap-6">
                             <canvas id="langChart" width="150" height="150" class="shrink-0"></canvas>
                             <ul id="languages" class="space-y-3 flex-1 text-sm"></ul>
                         </div>
-                        <p class="text-xs text-sand/40 mt-5">Bahasa yang paling sering digunakan</p>
+                        <p class="text-xs text-zinc-400 mt-5">Bahasa yang paling sering digunakan</p>
                     </div>
 
                     <!-- GitHub Contribution chart -->
                     <div class="md:col-span-3 bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors duration-300 flex flex-col justify-between">
                         <div class="flex items-center justify-between mb-5">
-                            <p class="text-xs tracking-widest text-moss uppercase">GitHub Contribution</p>
+                            <p class="text-xs tracking-widest text-moss uppercase font-semibold">GitHub Contribution</p>
                             <a href="https://github.com/FahreII" target="_blank"
                                 class="text-xs text-moss hover:underline">
                                 Lihat profil →
@@ -565,43 +565,47 @@
             </div>
         </section>
 
-        <!-- ================= CONTACT ================= -->
-        <section id="contact" class="py-32 px-8 md:px-20 bg-white text-dark">
+        <!-- ================= SECTION 6: CONTACT (PUTIH / WHITE) ================= -->
+        <section id="contact" class="py-32 px-8 md:px-20 bg-white text-dark border-t border-zinc-200">
             <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-4xl md:text-5xl font-light leading-tight">Hubungi<br><span
-                            class="font-medium text-olive">Saya</span></h2>
+                            class="font-semibold text-olive">Saya</span></h2>
                     <p class="mt-6 text-sm text-dark/70 max-w-md">Punya ide, proyek, atau sekadar ingin berdiskusi?
                         Kirim pesan dan saya akan membalas secepatnya.</p>
-                    <div class="mt-4 flex gap-4">
-                        <a href="https://github.com/FahreII" target="_blank">
-                            <img src="https://pngimg.com/uploads/github/github_PNG40.png" alt="" class="w-11 h-11">
+                    <div class="mt-6 flex gap-4">
+                        <a href="https://github.com/FahreII" target="_blank" aria-label="GitHub Profile"
+                            class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-dark/15 text-dark hover:bg-dark hover:text-white transition-all duration-300 text-sm font-medium">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                            <span>github.com/FahreII</span>
                         </a>
                     </div>
                 </div>
-                <div class="bg-sand/40 p-10 rounded-3xl shadow-sm">
+                <div class="bg-sand text-dark border border-olive/30 p-10 rounded-3xl shadow-md">
                     <form id="contactForm" class="space-y-6">
                         <div>
                             <input type="text" id="name" placeholder="Nama"
-                                class="w-full bg-transparent border-b border-olive/40 focus:border-olive outline-none py-3 text-sm">
+                                class="w-full bg-transparent border-b border-olive/40 focus:border-dark outline-none py-3 text-sm text-dark placeholder:text-dark/50 transition-colors">
                             <p id="nameError" class="text-red-600 text-xs mt-1 hidden">Nama wajib diisi</p>
                         </div>
                         <div>
                             <input type="email" id="email" placeholder="Email"
-                                class="w-full bg-transparent border-b border-olive/40 focus:border-olive outline-none py-3 text-sm">
+                                class="w-full bg-transparent border-b border-olive/40 focus:border-dark outline-none py-3 text-sm text-dark placeholder:text-dark/50 transition-colors">
                             <p id="emailError" class="text-red-600 text-xs mt-1 hidden">Email wajib diisi</p>
                         </div>
                         <div>
                             <textarea id="message" rows="4" placeholder="Pesan"
-                                class="w-full bg-transparent border-b border-olive/40 focus:border-olive outline-none py-3 text-sm resize-none"></textarea>
+                                class="w-full bg-transparent border-b border-olive/40 focus:border-dark outline-none py-3 text-sm resize-none text-dark placeholder:text-dark/50 transition-colors"></textarea>
                             <p id="messageError" class="text-red-600 text-xs mt-1 hidden">Pesan wajib diisi</p>
                         </div>
                         <button type="submit"
-                            class="w-full mt-6 py-3 rounded-full bg-olive text-white text-sm hover:bg-moss transition">Kirim
+                            class="w-full mt-6 py-3.5 rounded-full bg-olive text-white text-sm font-medium hover:bg-moss transition-colors duration-300 shadow-md">Kirim
                             Pesan</button>
                     </form>
                     <div id="popup"
-                        class="fixed top-8 right-8 bg-olive text-white px-6 py-4 rounded-xl shadow-lg opacity-0 transform translate-y-4 transition-all duration-300 z-50 pointer-events-none">
+                        class="fixed top-8 right-8 bg-dark text-sand border border-moss/40 px-6 py-4 rounded-xl shadow-2xl opacity-0 transform translate-y-4 transition-all duration-300 z-50 pointer-events-none">
                         Pesan berhasil dikirim!
                     </div>
                 </div>
@@ -759,44 +763,70 @@
             const ctx    = canvas.getContext('2d');
             const cx     = canvas.width / 2;
             const cy     = canvas.height / 2;
-            const radius = 62;
-            const maxExp = 10;
+            const baseRadius = 60;
+            const maxGrowth  = 8;
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             _sliceAngles = [];
 
+            // 1. Hitung sudut & radius tiap irisan
             let startAngle = -Math.PI / 2;
-            languages.forEach((lang, i) => {
-                const slice    = (lang.percent / 100) * 2 * Math.PI;
-                const midAngle = startAngle + slice / 2;
-                const endAngle = startAngle + slice;
-                const prog     = easeOut(expandProg[i] || 0);
-                const dx       = Math.cos(midAngle) * maxExp * prog;
-                const dy       = Math.sin(midAngle) * maxExp * prog;
-
-                ctx.beginPath();
-                ctx.moveTo(cx + dx, cy + dy);
-                ctx.arc(cx + dx, cy + dy, radius, startAngle, endAngle);
-                ctx.closePath();
-                ctx.fillStyle   = LANG_COLORS[i % LANG_COLORS.length];
-                ctx.fill();
-                ctx.strokeStyle = '#1B211A';
-                ctx.lineWidth   = 2;
-                ctx.stroke();
-
+            const slices = languages.map((lang, i) => {
+                const sliceAngle = (lang.percent / 100) * 2 * Math.PI;
+                const endAngle   = startAngle + sliceAngle;
+                const midAngle   = startAngle + sliceAngle / 2;
+                const prog       = easeOut(expandProg[i] || 0);
+                const info = {
+                    index: i,
+                    lang: lang,
+                    startAngle: startAngle,
+                    endAngle: endAngle,
+                    midAngle: midAngle,
+                    prog: prog,
+                    radius: baseRadius + (maxGrowth * prog),
+                    color: LANG_COLORS[i % LANG_COLORS.length]
+                };
                 _sliceAngles.push({ startAngle, endAngle, midAngle });
                 startAngle = endAngle;
+                return info;
             });
 
-            // Label tengah — fade in/out dengan globalAlpha
+            // 2. Fungsi render irisan
+            function renderSlice(s) {
+                ctx.save();
+                if (s.prog > 0.02) {
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+                    ctx.shadowBlur = 8 * s.prog;
+                }
+                ctx.beginPath();
+                ctx.moveTo(cx, cy); // Tetap di tengah (tidak lepas/geser keluar)
+                ctx.arc(cx, cy, s.radius, s.startAngle, s.endAngle);
+                ctx.closePath();
+                ctx.fillStyle   = s.color;
+                ctx.fill();
+                ctx.strokeStyle = '#141913';
+                ctx.lineWidth   = 2;
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            // 3. Render irisan lain dulu, lalu irisan aktif di paling atas agar terlihat membesar
+            slices.forEach((s) => {
+                if (s.index !== _hoveredSlice) renderSlice(s);
+            });
+            if (_hoveredSlice >= 0 && slices[_hoveredSlice]) {
+                renderSlice(slices[_hoveredSlice]);
+            }
+
+            // 4. Label tengah — fade in/out dengan globalAlpha
             ctx.textAlign    = 'center';
             ctx.textBaseline = 'middle';
-            const maxProg    = Math.max(...expandProg);
+            const maxProg    = Math.max(0, ...expandProg);
 
             if (_hoveredSlice >= 0 && languages[_hoveredSlice]) {
                 const p = easeOut(expandProg[_hoveredSlice] || 0);
                 ctx.globalAlpha = p;
-                ctx.fillStyle   = '#EBD5AB';
+                ctx.fillStyle   = '#FFFFFF';
                 ctx.font        = 'bold 11px Poppins, sans-serif';
                 ctx.fillText(languages[_hoveredSlice].name, cx, cy - 7);
                 ctx.fillStyle   = '#8BAE66';
@@ -808,7 +838,7 @@
             // Label default (nama bahasa terbesar) — fade out saat hover
             if (languages.length > 0) {
                 ctx.globalAlpha = Math.max(0, 1 - maxProg * 2);
-                ctx.fillStyle   = '#EBD5AB';
+                ctx.fillStyle   = '#FFFFFF';
                 ctx.font        = 'bold 12px Poppins, sans-serif';
                 ctx.fillText(languages[0].name, cx, cy);
                 ctx.globalAlpha = 1;
@@ -908,9 +938,9 @@
                         li.innerHTML = `
                             <div class="flex items-center gap-2">
                                 <span class="w-3 h-3 rounded-full shrink-0" style="background:${LANG_COLORS[i % LANG_COLORS.length]}"></span>
-                                <span class="text-sand/80 truncate">${lang.name}</span>
+                                <span class="text-white/90 truncate">${lang.name}</span>
                             </div>
-                            <div class="ml-5 text-xs text-sand/40">${lang.text} (${lang.percent.toFixed(2)}%)</div>
+                            <div class="ml-5 text-xs text-zinc-400">${lang.text} (${lang.percent.toFixed(2)}%)</div>
                         `;
                         list.appendChild(li);
                     });
