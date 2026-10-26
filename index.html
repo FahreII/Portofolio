@@ -718,36 +718,109 @@
             '#F39C12', '#2ECC71', '#E74C3C', '#1ABC9C'
         ];
 
-        function drawPieChart(languages) {
+        let _langData = [];
+        let _hoveredSlice = -1;
+        let _sliceAngles = [];
+
+        function drawPieChart(languages, hovered = -1) {
             const canvas = document.getElementById('langChart');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
             const cx = canvas.width / 2;
             const cy = canvas.height / 2;
-            const radius = 68;
+            const radius = 62;
+            const expandBy = 10;
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            _sliceAngles = [];
 
             let startAngle = -Math.PI / 2;
             languages.forEach((lang, i) => {
                 const slice = (lang.percent / 100) * 2 * Math.PI;
+                const midAngle = startAngle + slice / 2;
+                const endAngle = startAngle + slice;
+
+                // Geser irisan keluar jika di-hover
+                const dx = i === hovered ? Math.cos(midAngle) * expandBy : 0;
+                const dy = i === hovered ? Math.sin(midAngle) * expandBy : 0;
+
                 ctx.beginPath();
-                ctx.moveTo(cx, cy);
-                ctx.arc(cx, cy, radius, startAngle, startAngle + slice);
+                ctx.moveTo(cx + dx, cy + dy);
+                ctx.arc(cx + dx, cy + dy, radius, startAngle, endAngle);
                 ctx.closePath();
                 ctx.fillStyle = LANG_COLORS[i % LANG_COLORS.length];
                 ctx.fill();
-                startAngle += slice;
+                // Garis pemisah tipis
+                ctx.strokeStyle = '#EBD5AB';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                _sliceAngles.push({ startAngle, endAngle, midAngle });
+                startAngle = endAngle;
             });
 
-            // Label bahasa terbesar di tengah
-            if (languages.length > 0) {
+            // Label di tengah
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            if (hovered >= 0 && languages[hovered]) {
                 ctx.fillStyle = '#1B211A';
-                ctx.font = 'bold 13px Poppins, sans-serif';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
+                ctx.font = 'bold 11px Poppins, sans-serif';
+                ctx.fillText(languages[hovered].name, cx, cy - 7);
+                ctx.font = '10px Poppins, sans-serif';
+                ctx.fillStyle = '#628141';
+                ctx.fillText(languages[hovered].percent.toFixed(1) + '%', cx, cy + 7);
+            } else if (languages.length > 0) {
+                ctx.fillStyle = '#1B211A';
+                ctx.font = 'bold 12px Poppins, sans-serif';
                 ctx.fillText(languages[0].name, cx, cy);
             }
+        }
+
+        function getHoveredSlice(canvas, e) {
+            const rect = canvas.getBoundingClientRect();
+            const mx = e.clientX - rect.left;
+            const my = e.clientY - rect.top;
+            const cx = canvas.width / 2;
+            const cy = canvas.height / 2;
+
+            const dist = Math.sqrt((mx - cx) ** 2 + (my - cy) ** 2);
+            if (dist > 74 || dist < 4) return -1;
+
+            let angle = Math.atan2(my - cy, mx - cx);
+            if (angle < -Math.PI / 2) angle += 2 * Math.PI;
+
+            for (let i = 0; i < _sliceAngles.length; i++) {
+                const { startAngle, endAngle } = _sliceAngles[i];
+                if (angle >= startAngle && angle < endAngle) return i;
+            }
+            return -1;
+        }
+
+        function attachPieHover() {
+            const canvas = document.getElementById('langChart');
+            if (!canvas) return;
+            canvas.style.cursor = 'pointer';
+
+            canvas.addEventListener('mousemove', (e) => {
+                const h = getHoveredSlice(canvas, e);
+                if (h !== _hoveredSlice) {
+                    _hoveredSlice = h;
+                    drawPieChart(_langData, _hoveredSlice);
+                    // Highlight legend item yang sesuai
+                    document.querySelectorAll('#languages li').forEach((li, i) => {
+                        li.style.opacity = (_hoveredSlice === -1 || i === _hoveredSlice) ? '1' : '0.35';
+                        li.style.transition = 'opacity 0.2s';
+                    });
+                }
+            });
+
+            canvas.addEventListener('mouseleave', () => {
+                _hoveredSlice = -1;
+                drawPieChart(_langData, -1);
+                document.querySelectorAll('#languages li').forEach(li => {
+                    li.style.opacity = '1';
+                });
+            });
         }
 
         fetch("/api/wakatime")
@@ -762,7 +835,9 @@
                 list.innerHTML = "";
 
                 if (data.languages && data.languages.length > 0) {
-                    drawPieChart(data.languages);
+                    _langData = data.languages;
+                    drawPieChart(_langData);
+                    attachPieHover();
 
                     data.languages.forEach((lang, i) => {
                         const li = document.createElement("li");
